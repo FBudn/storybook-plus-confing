@@ -1,3 +1,8 @@
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable global-require */
+/* eslint-disable import/no-mutable-exports */
+/* eslint-disable @typescript-eslint/no-use-before-define */
+import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 
@@ -11,7 +16,7 @@ function App() {
 
 let AppEntryPoint = App;
 
-if (Constants.expoConfig.extra.storybookEnabled === "true") {
+if (Constants.expoConfig?.extra?.storybookEnabled === "true") {
   AppEntryPoint = require("./.storybook").default;
 }
 
