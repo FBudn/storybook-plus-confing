@@ -1,14 +1,13 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable global-require */
 /* eslint-disable import/no-mutable-exports */
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
 
 function App() {
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID="test-app-id">
       <Text>Open up App.tsx to start working on your app!</Text>
     </View>
   );
