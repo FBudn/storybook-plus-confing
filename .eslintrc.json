@@ -37,6 +37,13 @@
     "import/extensions": ["error", "never"],
     "react/prop-types": 0,
     "no-shadow": "off",
-    "@typescript-eslint/no-shadow": ["error"]
+    "@typescript-eslint/no-shadow": ["error"],
+    "no-mutable-exports": ["off"],
+    "import/no-mutable-exports": "off",
+    "global-require": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/function-component-definition": "off"
   }
 }

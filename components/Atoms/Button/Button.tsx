@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-use-before-define */
-/* eslint-disable import/prefer-default-export */
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 

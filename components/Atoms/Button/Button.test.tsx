@@ -1,6 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react-native";
 import "@testing-library/jest-native/extend-expect";
@@ -57,3 +54,5 @@ test(`Should render button and handle onClick`, () => {
   fireEvent.press(ButtonElement);
   expect(mockOnButtonClick).toBeCalledTimes(1);
 });
+
+// import "@testing-library/jest-native/extend-expect";

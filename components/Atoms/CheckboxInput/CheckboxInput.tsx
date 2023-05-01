@@ -1,5 +1,3 @@
-/* eslint-disable react/function-component-definition */
-/* eslint-disable @typescript-eslint/no-use-before-define */
 import Checkbox from "expo-checkbox";
 import React from "react";
 import { StyleSheet } from "react-native";

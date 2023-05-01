@@ -1,9 +1,5 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable @typescript-eslint/no-unused-vars */
-/* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
 import { render, screen } from "@testing-library/react-native";
-import "@testing-library/jest-native/extend-expect";
 import TestRenderer from "react-test-renderer";
 import CheckboxInput, { CheckboxInputProps } from "./CheckboxInput";
 
