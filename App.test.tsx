@@ -21,7 +21,5 @@ test(`test App have text content `, () => {
   render(<App />);
   const AppTest = screen.getByTestId(`test-app-id`);
   expect(AppTest).toBeOnTheScreen();
-  expect(AppTest).toHaveTextContent(
-    `Open up App.tsx to start working on your app!`
-  );
+  expect(AppTest).toHaveTextContent(`test test`);
 });

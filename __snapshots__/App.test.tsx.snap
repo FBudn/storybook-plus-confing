@@ -13,7 +13,7 @@ exports[`Should match snapshot: 1`] = `
   testID="test-app-id"
 >
   <Text>
-    Open up App.tsx to start working on your app!
+    test test
   </Text>
 </View>
 `;

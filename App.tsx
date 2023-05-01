@@ -8,7 +8,7 @@ import Constants from "expo-constants";
 function App() {
   return (
     <View style={styles.container} testID="test-app-id">
-      <Text>Open up App.tsx to start working on your app!</Text>
+      <Text>start</Text>
     </View>
   );
 }
