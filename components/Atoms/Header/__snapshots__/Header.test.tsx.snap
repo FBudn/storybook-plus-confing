@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match snapshot: 1`] = `
+<View
+  style={
+    {
+      "alignItems": "center",
+      "backgroundColor": "red",
+      "flex": 0.06,
+      "flexDirection": "row",
+    }
+  }
+  testID="test-header-id"
+>
+  <Text
+    style={
+      {
+        "color": "rgb(82 82 91)",
+        "fontWeight": "bold",
+      }
+    }
+  >
+     
+    Header Test
+     
+  </Text>
+</View>
+`;

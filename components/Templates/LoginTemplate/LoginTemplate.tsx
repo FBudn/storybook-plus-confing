@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet, View } from "react-native";
 import Button from "../../Atoms/Button/Button";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
+import Header from "../../Atoms/Header/Header";
 
 function LoginTemplate() {
   return (
@@ -10,6 +11,7 @@ function LoginTemplate() {
         HEYo
       </Button>
       <CheckboxInput testId="test-checkbox-id" />
+      <Header>Header jestem</Header>
     </View>
   );
 }

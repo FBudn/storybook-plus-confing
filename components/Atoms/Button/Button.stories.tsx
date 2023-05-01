@@ -1,9 +1,7 @@
-import React from "react";
-import { View } from "react-native";
 import Button from "./Button";
 
 const ButtonMeta = {
-  title: "Button",
+  title: "Atoms/Button",
   component: Button,
   argTypes: {
     onPress: { action: "pressed the button" },

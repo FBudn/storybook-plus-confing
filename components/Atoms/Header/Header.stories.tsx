@@ -1,12 +1,13 @@
 import React from "react";
 import { View } from "react-native";
-import CheckboxInput from "./CheckboxInput";
+import Header from "./Header";
 
-const CheckboxInputMeta = {
-  title: "Atoms/CheckboxInput",
-  component: CheckboxInput,
+const HeaderMeta = {
+  title: "Atoms/Header",
+  component: Header,
   args: {
-    testId: "test-checkbox-id",
+    testId: "test-header-id",
+    children: "Header jestem 2",
   },
   decorators: [
     (Story: any) => (
@@ -24,6 +25,6 @@ const CheckboxInputMeta = {
   ],
 };
 
-export default CheckboxInputMeta;
+export default HeaderMeta;
 
 export const Basic = {};
