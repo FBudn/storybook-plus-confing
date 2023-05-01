@@ -2,7 +2,7 @@ import React from "react";
 import { View } from "react-native";
 import CheckboxInput from "./CheckboxInput";
 
-const CheckboxMeta = {
+const CheckboxInputMeta = {
   title: "CheckboxInput",
   component: CheckboxInput,
   args: {
@@ -17,6 +17,6 @@ const CheckboxMeta = {
   ],
 };
 
-export default CheckboxMeta;
+export default CheckboxInputMeta;
 
 export const Basic = {};
