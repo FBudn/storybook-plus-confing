@@ -30,7 +30,8 @@ test(`Should have styles and render`, () => {
   const ButtonElement = screen.getByTestId(`test-button-id`);
   expect(ButtonElement).toBeOnTheScreen();
   expect(ButtonElement).toHaveStyle({
-    flex: 0.05,
+    flex: 0.1,
+    maxHeight: 40,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",

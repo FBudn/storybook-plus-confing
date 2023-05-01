@@ -23,7 +23,8 @@ function Button({ onPress, children, testId }: ButtonProps) {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.05,
+    flex: 0.1,
+    maxHeight: 40,
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "center",

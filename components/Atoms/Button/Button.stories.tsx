@@ -12,13 +12,6 @@ const ButtonMeta = {
     children: "Hello IM HERE love u much",
     testId: "test-button-id",
   },
-  decorators: [
-    (Story: any) => (
-      <View style={{ alignItems: "center", justifyContent: "center", flex: 1 }}>
-        <Story />
-      </View>
-    ),
-  ],
 };
 
 export default ButtonMeta;

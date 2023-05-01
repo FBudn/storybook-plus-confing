@@ -1,6 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import Button from "../../Atoms/Button/Button";
+import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 
 function LoginTemplate() {
   return (
@@ -8,6 +9,7 @@ function LoginTemplate() {
       <Button onPress={() => console.log(`hey`)} testId="test-button-id">
         HEYo
       </Button>
+      <CheckboxInput testId="test-checkbox-id" />
     </View>
   );
 }
