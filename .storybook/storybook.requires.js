@@ -16,6 +16,20 @@ global.STORIES = [
     importPathMatcher:
       "^\\.[\\\\/](?:components(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.(?:ts|tsx|js|jsx)?)$",
   },
+  {
+    titlePrefix: "",
+    directory: "./src",
+    files: "**/*.stories.mdx",
+    importPathMatcher:
+      "^\\.[\\\\/](?:src(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.mdx)$",
+  },
+  {
+    titlePrefix: "",
+    directory: "./src",
+    files: "**/*.stories.@(js|jsx|ts|tsx)",
+    importPathMatcher:
+      "^\\.[\\\\/](?:src(?:[\\\\/](?!\\.)(?:(?:(?!(?:^|[\\\\/])\\.).)*?)[\\\\/]|[\\\\/]|$)(?!\\.)(?=.)[^\\\\/]*?\\.stories\\.(js|jsx|ts|tsx))$",
+  },
 ];
 
 import "@storybook/addon-ondevice-controls/register";
@@ -47,7 +61,7 @@ try {
 
 const getStories = () => {
   return {
-    "./components/stories/Atoms/Button/Button.stories.tsx": require("../components/stories/Atoms/Button/Button.stories.tsx"),
+    "./components/Atoms/Button/Button.stories.tsx": require("../components/Atoms/Button/Button.stories.tsx"),
   };
 };
 
