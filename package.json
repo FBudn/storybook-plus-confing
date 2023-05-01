@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "@types/react-native": "^0.71.6",
     "expo": "^48.0.9",
     "expo-checkbox": "~2.3.1",
