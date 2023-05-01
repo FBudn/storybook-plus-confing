@@ -66,7 +66,7 @@ const styles = (color: string) =>
     container: {
       flex: 0.05,
       width: 60,
-      height: 25,
+      height: 60,
       justifyContent: "center",
       alignItems: "center",
       padding: 8,

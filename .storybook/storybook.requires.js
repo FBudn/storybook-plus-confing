@@ -64,6 +64,7 @@ const getStories = () => {
     "./components/Atoms/Button/Button.stories.tsx": require("../components/Atoms/Button/Button.stories.tsx"),
     "./components/Atoms/CheckboxInput/CheckboxInput.stories.tsx": require("../components/Atoms/CheckboxInput/CheckboxInput.stories.tsx"),
     "./components/Atoms/Header/Header.stories.tsx": require("../components/Atoms/Header/Header.stories.tsx"),
+    "./components/Atoms/Icon/Icon.stories.tsx": require("../components/Atoms/Icon/Icon.stories.tsx"),
   };
 };
 

@@ -5,8 +5,7 @@ exports[`Should match snapshot: 1`] = `
   style={
     {
       "alignItems": "center",
-      "backgroundColor": "red",
-      "flex": 0.06,
+      "flex": 0.05,
       "flexDirection": "row",
     }
   }
