@@ -5,6 +5,7 @@ import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 import Header from "../../Atoms/Header/Header";
 import Icon from "../../Atoms/Icon/Icon";
 import Input from "../../Atoms/Input/Input";
+import LinkButton from "../../Atoms/LinkButton/LinkButton";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -19,6 +20,10 @@ function LoginTemplate() {
   };
   const handleIcon3Press = () => {
     onPressIcon(`LinkedIn`);
+  };
+
+  const handleLink = () => {
+    console.log(`jol`);
   };
 
   return (
@@ -47,6 +52,9 @@ function LoginTemplate() {
         icon="linkedin"
       />
       <Input testId="test-input-id" />
+      <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
+        Przycisk Link
+      </LinkButton>
     </View>
   );
 }

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Schould match snapshot 1`] = `
+<View
+  accessibilityState={
+    {
+      "busy": undefined,
+      "checked": undefined,
+      "disabled": undefined,
+      "expanded": undefined,
+      "selected": undefined,
+    }
+  }
+  accessibilityValue={
+    {
+      "max": undefined,
+      "min": undefined,
+      "now": undefined,
+      "text": undefined,
+    }
+  }
+  accessible={true}
+  collapsable={false}
+  focusable={true}
+  onClick={[Function]}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={
+    {
+      "alignContent": "center",
+      "alignItems": "center",
+      "justifyContent": "flex-end",
+      "opacity": 1,
+      "textAlign": "center",
+    }
+  }
+  testID="test-linkButton-id"
+>
+  <Text
+    style={
+      {
+        "color": "rgb(82 82 91)",
+        "fontSize": 20,
+        "fontWeight": "500",
+        "textDecorationColor": "rgb(82 82 91)",
+        "textDecorationLine": "underline",
+        "textDecorationStyle": "solid",
+      }
+    }
+  >
+     
+    LinkButton Test
+     
+  </Text>
+</View>
+`;
