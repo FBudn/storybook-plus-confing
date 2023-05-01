@@ -3,17 +3,17 @@
 import React from "react";
 import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
-export interface MyButtonProps {
+export interface ButtonProps {
   onPress: () => void;
   text: string;
 }
 
-function MyButton({ onPress, text }: MyButtonProps) {
+function Button({ onPress, text }: ButtonProps) {
   return (
     <TouchableOpacity
       style={styles.container}
       onPress={onPress}
-      testID="test-myButton-id"
+      testID="test-button-id"
     >
       <Text style={styles.text}>{text}</Text>
     </TouchableOpacity>
@@ -29,4 +29,4 @@ const styles = StyleSheet.create({
   text: { color: "black" },
 });
 
-export default MyButton;
+export default Button;
