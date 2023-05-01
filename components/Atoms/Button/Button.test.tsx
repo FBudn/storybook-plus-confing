@@ -2,7 +2,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable import/no-extraneous-dependencies */
 import React from "react";
-import { render, screen } from "@testing-library/react-native";
+import { fireEvent, render, screen } from "@testing-library/react-native";
 import "@testing-library/jest-native/extend-expect";
 import TestRenderer from "react-test-renderer";
 import Button, { ButtonProps } from "./Button";
@@ -10,23 +10,49 @@ import Button, { ButtonProps } from "./Button";
 const mockOnButtonClick = jest.fn();
 const props: ButtonProps = {
   onPress: mockOnButtonClick,
-  text: `test test`,
+  children: `test test`,
+  testId: `test-button-id`,
 };
 
-test(`should App render`, () => {
+test(`should Button render`, () => {
   render(<Button {...props} />);
-  const ButtonTest = screen.getByTestId(`test-button-id`);
-  expect(ButtonTest).toBeOnTheScreen();
+  const ButtonElement = screen.getByTestId(`test-button-id`);
+  expect(ButtonElement).toBeOnTheScreen();
 });
 
 test("Should match snapshot:", () => {
-  const ButtonTest = TestRenderer.create(<Button {...props} />).toJSON();
-  expect(ButtonTest).toMatchSnapshot();
+  const ButtonElement = TestRenderer.create(<Button {...props} />).toJSON();
+  expect(ButtonElement).toMatchSnapshot();
 });
 
-test(`test Button have text content `, () => {
+test(`Should have styles and render`, () => {
   render(<Button {...props} />);
-  const ButtonTest = screen.getByTestId(`test-button-id`);
-  expect(ButtonTest).toBeOnTheScreen();
-  expect(ButtonTest).toHaveTextContent(`test test`);
+  const ButtonElement = screen.getByTestId(`test-button-id`);
+  expect(ButtonElement).toBeOnTheScreen();
+  expect(ButtonElement).toHaveStyle({
+    flex: 0.05,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    backgroundColor: "rgb(236 72 153)",
+    shadowColor: "#94a3b8",
+    borderRadius: 5,
+  });
+});
+
+test(`should render with text `, () => {
+  render(<Button {...props} />);
+  const ButtonElement = screen.getByTestId(`test-button-id`);
+  expect(ButtonElement).toBeOnTheScreen();
+  expect(ButtonElement).toHaveTextContent(`test test`);
+});
+
+test(`Should render button and handle onClick`, () => {
+  render(<Button {...props} />);
+  const ButtonElement = screen.getByTestId(`test-button-id`);
+  expect(ButtonElement).toBeOnTheScreen();
+  expect(mockOnButtonClick).toBeCalledTimes(0);
+  fireEvent.press(ButtonElement);
+  expect(mockOnButtonClick).toBeCalledTimes(1);
 });

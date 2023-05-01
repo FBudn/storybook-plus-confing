@@ -5,28 +5,34 @@ import { TouchableOpacity, Text, StyleSheet } from "react-native";
 
 export interface ButtonProps {
   onPress: () => void;
-  text: string;
+  children: string;
+  testId: string;
 }
 
-function Button({ onPress, text }: ButtonProps) {
+function Button({ onPress, children, testId }: ButtonProps) {
   return (
     <TouchableOpacity
       style={styles.container}
       onPress={onPress}
-      testID="test-button-id"
+      testID={testId}
     >
-      <Text style={styles.text}>{text}</Text>
+      <Text style={styles.text}>{children}</Text>
     </TouchableOpacity>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    paddingHorizontal: 16,
-    paddingVertical: 8,
-    backgroundColor: "violet",
+    flex: 0.05,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "center",
+    textAlign: "center",
+    backgroundColor: "rgb(236 72 153)",
+    shadowColor: "#94a3b8",
+    borderRadius: 5,
   },
-  text: { color: "black" },
+  text: { color: "white", fontWeight: "bold" },
 });
 
 export default Button;

@@ -31,10 +31,15 @@ exports[`Should match snapshot: 1`] = `
   onStartShouldSetResponder={[Function]}
   style={
     {
-      "backgroundColor": "violet",
+      "alignItems": "center",
+      "backgroundColor": "rgb(236 72 153)",
+      "borderRadius": 5,
+      "flex": 0.05,
+      "flexDirection": "row",
+      "justifyContent": "center",
       "opacity": 1,
-      "paddingHorizontal": 16,
-      "paddingVertical": 8,
+      "shadowColor": "#94a3b8",
+      "textAlign": "center",
     }
   }
   testID="test-button-id"
@@ -42,7 +47,8 @@ exports[`Should match snapshot: 1`] = `
   <Text
     style={
       {
-        "color": "black",
+        "color": "white",
+        "fontWeight": "bold",
       }
     }
   >

@@ -1,15 +1,16 @@
 import React from "react";
 import { View } from "react-native";
-import MyButton from "./Button";
+import Button from "./Button";
 
-const MyButtonMeta = {
-  title: "MyButton",
-  component: MyButton,
+const ButtonMeta = {
+  title: "Button",
+  component: Button,
   argTypes: {
     onPress: { action: "pressed the button" },
   },
   args: {
-    text: "Hello IM HERE love u much",
+    children: "Hello IM HERE love u much",
+    testId: "test-button-id",
   },
   decorators: [
     (Story: any) => (
@@ -20,12 +21,12 @@ const MyButtonMeta = {
   ],
 };
 
-export default MyButtonMeta;
+export default ButtonMeta;
 
 export const Basic = {};
 
 export const AnotherExample = {
   args: {
-    text: "Another example",
+    children: "Another example",
   },
 };

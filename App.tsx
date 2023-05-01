@@ -4,29 +4,25 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
 import Constants from "expo-constants";
-import MyButton from "./components/Atoms/Button/Button";
+import LoginTemplate from "./components/Templates/LoginTemplate/LoginTemplate";
 
 function App() {
   return (
     <View style={styles.container} testID="test-app-id">
-      <Text>start</Text>
-      <MyButton onPress={() => console.log(`hey`)} text="Hey" />
+      <LoginTemplate />
     </View>
   );
 }
 
 let AppEntryPoint = App;
 
-if (Constants.expoConfig?.extra?.storybookEnabled === "false") {
+if (Constants.expoConfig?.extra?.storybookEnabled === "true") {
   AppEntryPoint = require("./.storybook").default;
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
   },
 });
 
