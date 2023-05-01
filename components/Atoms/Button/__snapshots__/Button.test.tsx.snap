@@ -34,12 +34,19 @@ exports[`Should match snapshot: 1`] = `
       "alignItems": "center",
       "backgroundColor": "rgb(236 72 153)",
       "borderRadius": 5,
-      "flex": 0.1,
       "flexDirection": "row",
+      "height": 40,
       "justifyContent": "center",
+      "margin": 5,
       "maxHeight": 40,
       "opacity": 1,
       "shadowColor": "#94a3b8",
+      "shadowOffset": {
+        "height": 2,
+        "width": 0,
+      },
+      "shadowOpacity": 0.23,
+      "shadowRadius": 2.62,
       "textAlign": "center",
     }
   }

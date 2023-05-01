@@ -25,7 +25,6 @@ test("Should render and have styles:", () => {
   expect(HeaderElement).toBeOnTheScreen();
 
   expect(HeaderElement).toHaveStyle({
-    flex: 0.05,
     flexDirection: "row",
     alignItems: "center",
   });

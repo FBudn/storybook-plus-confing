@@ -2,7 +2,6 @@ import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react-native";
 import TestRenderer from "react-test-renderer";
 import Icon, { IconProps } from "./Icon";
-import "jest-styled-components";
 
 const mockOnPressIcon = jest.fn();
 

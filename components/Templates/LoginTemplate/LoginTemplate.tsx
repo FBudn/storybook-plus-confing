@@ -4,6 +4,7 @@ import Button from "../../Atoms/Button/Button";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 import Header from "../../Atoms/Header/Header";
 import Icon from "../../Atoms/Icon/Icon";
+import Input from "../../Atoms/Input/Input";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -45,6 +46,7 @@ function LoginTemplate() {
         color="blue"
         icon="linkedin"
       />
+      <Input testId="test-input-id" />
     </View>
   );
 }

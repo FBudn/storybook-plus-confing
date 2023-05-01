@@ -16,7 +16,6 @@ const Header: React.FC<HeaderProps> = ({ children, testId }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.05,
     flexDirection: "row",
     alignItems: "center",
   },

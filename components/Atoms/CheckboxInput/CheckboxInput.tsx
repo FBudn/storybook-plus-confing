@@ -13,12 +13,11 @@ const CheckboxInput: React.FC<CheckboxInputProps> = ({ testId }) => {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 0.05,
     maxHeight: 30,
     width: 30,
     maxWidth: 30,
-    minHeight: 20,
-    minWidth: 20,
+    minHeight: 30,
+    minWidth: 30,
     marginLeft: 5,
   },
 });
