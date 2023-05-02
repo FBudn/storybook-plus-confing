@@ -56,14 +56,7 @@ function LoginTemplate() {
       <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
         Przycisk Link
       </LinkButton>
-      <TextLabel
-        testId="test-textLabel-id"
-        color="red"
-        align="flex-end"
-        justify="center"
-        fontSize={1}
-        fontWeight="bold"
-      >
+      <TextLabel testId="test-textLabel-id" color="red" fontSize={50}>
         Siemaszko
       </TextLabel>
     </View>

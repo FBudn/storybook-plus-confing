@@ -3,7 +3,45 @@ import { StyleSheet, Text, View } from "react-native";
 
 export interface TextLabelProps {
   children: React.ReactNode;
-  color: string;
+  color: string | undefined;
+  fontSize: number | undefined;
+  testId: string | undefined;
+}
+
+const TextLabel: React.FC<TextLabelProps> = ({
+  children,
+  testId,
+  color,
+  fontSize,
+}) => {
+  return (
+    <View testID={testId}>
+      <Text style={styles(color, fontSize).text}>{children}</Text>
+    </View>
+  );
+};
+
+const styles = (
+  color?: string | undefined,
+
+  fontSize?: number | undefined
+) =>
+  StyleSheet.create({
+    text: {
+      color: `${color}`,
+      fontSize,
+    },
+  });
+
+export default TextLabel;
+
+/*
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+
+export interface TextLabelProps {
+  children: React.ReactNode;
+  color: string | undefined;
   align:
     | "flex-start"
     | "flex-end"
@@ -34,9 +72,9 @@ export interface TextLabelProps {
     | "900"
     | undefined;
   fontSize: number | undefined;
-  testId: string;
-  width?: string;
-  margin?: string;
+  testId: string | undefined;
+  width?: string | undefined;
+  margin?: string | undefined;
 }
 
 const TextLabel: React.FC<TextLabelProps> = ({
@@ -52,23 +90,19 @@ const TextLabel: React.FC<TextLabelProps> = ({
 }) => {
   return (
     <View
+      testID={testId}
       style={
-        styles(undefined, align, justify, undefined, undefined, width, margin)
+        styles(color, align, justify, fontWeight, fontSize, width, margin)
           .container
       }
     >
-      <Text
-        testID={testId}
-        style={styles(color, undefined, undefined, fontWeight, fontSize).text}
-      >
-        {children}
-      </Text>
+      <Text>{children}</Text>
     </View>
   );
 };
 
 const styles = (
-  color?: string,
+  color?: string | undefined,
   align?:
     | "flex-start"
     | "flex-end"
@@ -99,8 +133,8 @@ const styles = (
     | "900"
     | undefined,
   fontSize?: number | undefined,
-  width?: string,
-  margin?: string
+  width?: string | undefined,
+  margin?: string | undefined
 ) =>
   StyleSheet.create({
     container: {
@@ -108,8 +142,6 @@ const styles = (
       margin: `${margin}`,
       alignContent: align,
       justifyContent: justify,
-    },
-    text: {
       color: `${color}`,
       fontWeight,
       fontSize,
@@ -117,3 +149,5 @@ const styles = (
   });
 
 export default TextLabel;
+
+*/

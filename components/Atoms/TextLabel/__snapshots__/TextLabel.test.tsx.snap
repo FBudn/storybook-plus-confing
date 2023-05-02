@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match snapshot 1`] = `
+<View
+  testID="test-textLabel-id"
+>
+  <Text
+    style={
+      {
+        "color": "black",
+        "fontSize": 10,
+      }
+    }
+  >
+    TextLabel Test
+  </Text>
+</View>
+`;
