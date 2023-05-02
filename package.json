@@ -67,6 +67,14 @@
     "preset": "react-native",
     "setupFilesAfterEnv": [
       "@testing-library/jest-native/extend-expect"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "../components/**/*.test.?(ts, tsx, js, jsx)",
+      "!**/coverage/**",
+      "!**/node_modules/**",
+      "!**/babel.config.js",
+      "!**/jest.setup.js"
     ]
   },
   "version": "1.0.0",
