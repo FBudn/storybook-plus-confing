@@ -6,6 +6,7 @@ import Header from "../../Atoms/Header/Header";
 import Icon from "../../Atoms/Icon/Icon";
 import Input from "../../Atoms/Input/Input";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
+import TextLabel from "../../Atoms/TextLabel/TextLabel";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -55,6 +56,16 @@ function LoginTemplate() {
       <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
         Przycisk Link
       </LinkButton>
+      <TextLabel
+        testId="test-textLabel-id"
+        color="red"
+        align="flex-end"
+        justify="center"
+        fontSize={1}
+        fontWeight="bold"
+      >
+        Siemaszko
+      </TextLabel>
     </View>
   );
 }
