@@ -7,6 +7,7 @@ import Icon from "../../Atoms/Icon/Icon";
 import Input from "../../Atoms/Input/Input";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
+import Line from "../../Molecules/Line/Line";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -59,6 +60,7 @@ function LoginTemplate() {
       <TextLabel testId="test-textLabel-id" color="red" fontSize={50}>
         Siemaszko
       </TextLabel>
+      <Line>OR</Line>
     </View>
   );
 }
