@@ -9,27 +9,18 @@ export interface LineProps {
 const Line: React.FC<LineProps> = ({ children, testId }) => {
   return (
     <View data-testid={testId} style={styles.container}>
-      <View
-        style={{
-          borderBottomColor: "gray",
-          borderBottomWidth: StyleSheet.hairlineWidth,
-        }}
-      />
+      <View style={styles.line} />
       <Text data-testid="test-Line-Text" style={styles.text}>
         {children}
       </Text>
-      <View
-        style={{
-          borderBottomColor: "gray",
-          borderBottomWidth: StyleSheet.hairlineWidth,
-        }}
-      />
+      <View style={styles.line} />
     </View>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
+    flexDirection: "row",
     width: "100%",
     height: 40,
     justifyContent: "center",
@@ -46,7 +37,13 @@ const styles = StyleSheet.create({
     lineHeight: 1.25,
     fontWeight: "500",
     color: "rgb(156 163 175)",
+    alignItems: "center",
+    justifyContent: "center",
+    alignContent: "center",
+    textAlign: "center",
+    backgroundColor: "red",
   },
+  line: { width: 10, borderBottomColor: "gray", borderBottomWidth: 10 },
 });
 
 export default Line;
