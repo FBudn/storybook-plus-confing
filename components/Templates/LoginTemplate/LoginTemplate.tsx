@@ -36,11 +36,14 @@ function LoginTemplate() {
     <View style={styles.container} testID="test-app-id">
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile>
+        <Header>Header jestem</Header>
+        <Input testId="test-input-id" />
+        <Input testId="test-input-id" />
+        <CheckboxInput testId="test-checkbox-id" />
         <Button onPress={() => console.log(`hey`)} testId="test-button-id">
           HEY
         </Button>
-        <CheckboxInput testId="test-checkbox-id" />
-        <Header>Header jestem</Header>
+        <Line>OR</Line>
         <Icon
           testId="test-icon1-id"
           onPressIcon={handleIcon1Press}
@@ -59,14 +62,12 @@ function LoginTemplate() {
           color="blue"
           icon="linkedin"
         />
-        <Input testId="test-input-id" />
         <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
           Przycisk Link
         </LinkButton>
         <TextLabel testId="test-textLabel-id" color="red" fontSize={50}>
           Siemaszko
         </TextLabel>
-        <Line>OR</Line>
       </Tile>
     </View>
   );

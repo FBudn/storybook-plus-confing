@@ -20,12 +20,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "80%",
     padding: 16,
-    gap: 1500,
   },
   text: {
     flex: 1,
-    backgroundColor: "green",
-    gap: 1500,
+    alignItems: "center",
+    textAlign: "center",
   },
 });
 
