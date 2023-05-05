@@ -1,5 +1,6 @@
 import React from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
+import * as NavigationBar from "expo-navigation-bar";
 import Button from "../../Atoms/Button/Button";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 import Header from "../../Atoms/Header/Header";
@@ -28,6 +29,8 @@ function LoginTemplate() {
   const handleLink = () => {
     console.log(`jol`);
   };
+
+  NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
 
   return (
     <View style={styles.container} testID="test-app-id">

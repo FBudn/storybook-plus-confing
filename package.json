@@ -14,7 +14,8 @@
     "react-native": "0.71.4",
     "react-native-web": "~0.18.7",
     "react-test-renderer": "^18.2.0",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "expo-navigation-bar": "~2.1.1"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",
