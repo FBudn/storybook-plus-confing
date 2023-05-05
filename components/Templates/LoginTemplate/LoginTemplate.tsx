@@ -8,6 +8,7 @@ import Input from "../../Atoms/Input/Input";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import Line from "../../Molecules/Line/Line";
+import Tile from "../../Atoms/Tile/Tile";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -30,37 +31,39 @@ function LoginTemplate() {
 
   return (
     <View style={styles.container} testID="test-app-id">
-      <Button onPress={() => console.log(`hey`)} testId="test-button-id">
-        HEY
-      </Button>
-      <CheckboxInput testId="test-checkbox-id" />
-      <Header>Header jestem</Header>
-      <Icon
-        testId="test-icon1-id"
-        onPressIcon={handleIcon1Press}
-        color="blue"
-        icon="facebook"
-      />
-      <Icon
-        testId="test-icon2-id"
-        onPressIcon={handleIcon2Press}
-        color="red"
-        icon="google"
-      />
-      <Icon
-        testId="test-icon3-id"
-        onPressIcon={handleIcon3Press}
-        color="blue"
-        icon="linkedin"
-      />
-      <Input testId="test-input-id" />
-      <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
-        Przycisk Link
-      </LinkButton>
-      <TextLabel testId="test-textLabel-id" color="red" fontSize={50}>
-        Siemaszko
-      </TextLabel>
-      <Line>OR</Line>
+      <Tile>
+        <Button onPress={() => console.log(`hey`)} testId="test-button-id">
+          HEY
+        </Button>
+        <CheckboxInput testId="test-checkbox-id" />
+        <Header>Header jestem</Header>
+        <Icon
+          testId="test-icon1-id"
+          onPressIcon={handleIcon1Press}
+          color="blue"
+          icon="facebook"
+        />
+        <Icon
+          testId="test-icon2-id"
+          onPressIcon={handleIcon2Press}
+          color="red"
+          icon="google"
+        />
+        <Icon
+          testId="test-icon3-id"
+          onPressIcon={handleIcon3Press}
+          color="blue"
+          icon="linkedin"
+        />
+        <Input testId="test-input-id" />
+        <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
+          Przycisk Link
+        </LinkButton>
+        <TextLabel testId="test-textLabel-id" color="red" fontSize={50}>
+          Siemaszko
+        </TextLabel>
+        <Line>OR</Line>
+      </Tile>
     </View>
   );
 }
@@ -70,6 +73,7 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "rgb(96 165 250)",
     justifyContent: "center",
+    alignItems: "center",
     margin: 0,
   },
 });

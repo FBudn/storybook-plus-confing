@@ -1,5 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity } from "react-native";
+import { StyleSheet, TouchableOpacity, View } from "react-native";
 import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
 
 export interface IconProps {
@@ -13,50 +13,61 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
   switch (icon) {
     case "facebook":
       return (
-        <TouchableOpacity
-          style={styles(color).container}
-          testID={testId}
-          onPress={onPressIcon}
-        >
-          <FontAwesome
+        <View>
+          <TouchableOpacity
+            style={styles(color).container}
             testID={testId}
-            name="facebook-f"
-            size={24}
-            color={color}
-          />
-        </TouchableOpacity>
+            onPress={onPressIcon}
+          >
+            <FontAwesome
+              testID={testId}
+              name="facebook-f"
+              size={24}
+              color={color}
+            />
+          </TouchableOpacity>
+        </View>
       );
     case "google":
       return (
-        <TouchableOpacity
-          style={styles(color).container}
-          testID={testId}
-          onPress={onPressIcon}
-        >
-          <AntDesign testID={testId} name="google" size={24} color={color} />
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            style={styles(color).container}
+            testID={testId}
+            onPress={onPressIcon}
+          >
+            <AntDesign testID={testId} name="google" size={24} color={color} />
+          </TouchableOpacity>
+        </View>
       );
     case "linkedin":
       return (
-        <TouchableOpacity
-          style={styles(color).container}
-          testID={testId}
-          onPress={onPressIcon}
-        >
-          <Entypo testID={testId} name="linkedin" size={24} color={color} />
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            style={styles(color).container}
+            testID={testId}
+            onPress={onPressIcon}
+          >
+            <Entypo testID={testId} name="linkedin" size={24} color={color} />
+          </TouchableOpacity>
+        </View>
       );
 
     default:
       return (
-        <TouchableOpacity style={styles(color).container} onPress={onPressIcon}>
-          <FontAwesome
-            testID={testId}
-            name="facebook-f"
-            size={24}
-            color={color}
-          />
-        </TouchableOpacity>
+        <View>
+          <TouchableOpacity
+            style={styles(color).container}
+            onPress={onPressIcon}
+          >
+            <FontAwesome
+              testID={testId}
+              name="facebook-f"
+              size={24}
+              color={color}
+            />
+          </TouchableOpacity>
+        </View>
       );
   }
 };

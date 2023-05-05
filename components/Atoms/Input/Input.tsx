@@ -1,17 +1,19 @@
 import React from "react";
-import { StyleSheet, TextInput } from "react-native";
+import { StyleSheet, TextInput, View } from "react-native";
 
 export interface InputProps {
   testId: string;
 }
 
 const Input: React.FC<InputProps> = ({ testId }) => (
-  <TextInput
-    style={styles.container}
-    data-testid={testId}
-    placeholder="jestem"
-    testID={testId}
-  />
+  <View>
+    <TextInput
+      style={styles.container}
+      data-testid={testId}
+      placeholder="jestem"
+      testID={testId}
+    />
+  </View>
 );
 
 const styles = StyleSheet.create({

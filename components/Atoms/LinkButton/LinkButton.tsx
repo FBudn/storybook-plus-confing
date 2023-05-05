@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, StyleSheet, TouchableOpacity } from "react-native";
+import { Text, StyleSheet, TouchableOpacity, View } from "react-native";
 
 export interface LinkButtonProps {
   children: React.ReactNode;
@@ -13,13 +13,15 @@ const LinkButton: React.FC<LinkButtonProps> = ({
   testId,
 }) => {
   return (
-    <TouchableOpacity
-      style={styles.container}
-      testID={testId}
-      onPress={onClickLink}
-    >
-      <Text style={styles.text}> {children} </Text>
-    </TouchableOpacity>
+    <View>
+      <TouchableOpacity
+        style={styles.container}
+        testID={testId}
+        onPress={onClickLink}
+      >
+        <Text style={styles.text}> {children} </Text>
+      </TouchableOpacity>
+    </View>
   );
 };
 

@@ -68,6 +68,7 @@ const getStories = () => {
     "./components/Atoms/Input/Input.stories.tsx": require("../components/Atoms/Input/Input.stories.tsx"),
     "./components/Atoms/LinkButton/LinkButton.stories.tsx": require("../components/Atoms/LinkButton/LinkButton.stories.tsx"),
     "./components/Atoms/TextLabel/TextLabel.stories.tsx": require("../components/Atoms/TextLabel/TextLabel.stories.tsx"),
+    "./components/Atoms/Tile/Tile.stories.tsx": require("../components/Atoms/Tile/Tile.stories.tsx"),
   };
 };
 
