@@ -18,11 +18,6 @@ const styles = StyleSheet.create({
     padding: 16,
     alignItems: "center",
   },
-  text: {
-    flex: 1,
-    width: "100%",
-    textAlign: "center",
-  },
 });
 
 export default Tile;
