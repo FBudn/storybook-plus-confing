@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "80%",
     padding: 16,
-    alignItems: "center",
+    alignItems: "stretch",
   },
 });
 
