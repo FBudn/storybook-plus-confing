@@ -6,11 +6,7 @@ export interface TileProps {
 }
 
 const Tile: React.FC<TileProps> = ({ children }) => {
-  return (
-    <View style={styles.container}>
-      <Text style={styles.text}> {children}</Text>
-    </View>
-  );
+  return <View style={styles.container}>{children}</View>;
 };
 
 const styles = StyleSheet.create({
@@ -20,10 +16,11 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     width: "80%",
     padding: 16,
+    alignItems: "center",
   },
   text: {
     flex: 1,
-    alignItems: "center",
+    width: "100%",
     textAlign: "center",
   },
 });

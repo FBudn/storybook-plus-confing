@@ -84,6 +84,12 @@ const styles = StyleSheet.create({
   statusbar: {
     backgroundColor: "rgb(96 165 250)",
   },
+  empty: {
+    flex: 1,
+    width: 100,
+    backgroundColor: "pink",
+    height: 20,
+  },
 });
 
 export default LoginTemplate;
