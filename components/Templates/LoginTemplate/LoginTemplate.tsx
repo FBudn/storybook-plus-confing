@@ -36,11 +36,12 @@ function LoginTemplate() {
     <View style={styles.container} testID="test-app-id">
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
-        <Header>Header jestem</Header>
+        <Header>LOGIN</Header>
         <TextLabel
           testId="test-textLabel-id"
           color="rgb(82 82 91)"
           fontSize={14}
+          alignItems="flex-start"
         >
           Email
         </TextLabel>
@@ -49,6 +50,7 @@ function LoginTemplate() {
           testId="test-textLabel-id"
           color="rgb(82 82 91)"
           fontSize={14}
+          alignItems="flex-start"
         >
           Password
         </TextLabel>
@@ -56,10 +58,20 @@ function LoginTemplate() {
         <CheckboxAndLabel
           testId="test-checkboxAndLabel-id"
           infoText="Remember me?"
+          alignItems="flex-start"
         />
         <Button onPress={() => console.log(`hey`)} testId="test-button-id">
           HEY
         </Button>
+        <TextLabel
+          testId="test-textLabel-id"
+          fontSize={10}
+          color="rgb(82 82 91)"
+          alignItems="flex-end"
+          textAlign="right"
+        >
+          Forgot Password?
+        </TextLabel>
         <Line>OR</Line>
         <Icon
           testId="test-icon1-id"

@@ -1,11 +1,13 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { FlexAlignType, StyleSheet, Text, View } from "react-native";
 
 export interface TextLabelProps {
   children: React.ReactNode;
   color: string | undefined;
   fontSize: number | undefined;
   testId: string | undefined;
+  alignItems?: FlexAlignType | undefined;
+  textAlign?: any;
 }
 
 const TextLabel: React.FC<TextLabelProps> = ({
@@ -13,10 +15,17 @@ const TextLabel: React.FC<TextLabelProps> = ({
   testId,
   color,
   fontSize,
+  alignItems,
+  textAlign,
 }) => {
   return (
-    <View testID={testId}>
-      <Text style={styles(color, fontSize).text}>{children}</Text>
+    <View
+      testID={testId}
+      style={styles(undefined, undefined, alignItems).container}
+    >
+      <Text style={styles(color, fontSize, undefined, textAlign).text}>
+        {children}
+      </Text>
     </View>
   );
 };
@@ -24,12 +33,22 @@ const TextLabel: React.FC<TextLabelProps> = ({
 const styles = (
   color?: string | undefined,
 
-  fontSize?: number | undefined
+  fontSize?: number | undefined,
+
+  alignItems?: FlexAlignType | undefined,
+
+  textAlign?: any
 ) =>
   StyleSheet.create({
     text: {
       color: `${color}`,
       fontSize,
+      width: "100%",
+      textAlign,
+    },
+    container: {
+      width: "100%",
+      alignItems,
     },
   });
 
@@ -140,7 +159,7 @@ const styles = (
     container: {
       width: `${width}`,
       margin: `${margin}`,
-      alignContent: align,
+      alignItems: align,
       justifyContent: justify,
       color: `${color}`,
       fontWeight,

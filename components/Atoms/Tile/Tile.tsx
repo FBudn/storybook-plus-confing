@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 10,
     width: "80%",
-    padding: 16,
+    padding: 20,
     alignItems: "stretch",
     gap: 5,
   },
