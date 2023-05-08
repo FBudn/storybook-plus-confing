@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
 import Button from "../../Atoms/Button/Button";
-import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
+import CheckboxAndLabel from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import Header from "../../Atoms/Header/Header";
 import Icon from "../../Atoms/Icon/Icon";
 import Input from "../../Atoms/Input/Input";
@@ -53,7 +53,10 @@ function LoginTemplate() {
           Password
         </TextLabel>
         <Input testId="test-input-id" />
-        <CheckboxInput testId="test-checkbox-id" />
+        <CheckboxAndLabel
+          testId="test-checkboxAndLabel-id"
+          infoText="Remember me?"
+        />
         <Button onPress={() => console.log(`hey`)} testId="test-button-id">
           HEY
         </Button>
