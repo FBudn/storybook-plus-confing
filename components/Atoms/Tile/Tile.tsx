@@ -22,6 +22,7 @@ const styles = StyleSheet.create({
     width: "80%",
     padding: 16,
     alignItems: "stretch",
+    gap: 5,
   },
 });
 

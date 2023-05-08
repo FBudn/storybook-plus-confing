@@ -7,12 +7,7 @@ export interface InputProps {
 
 const Input: React.FC<InputProps> = ({ testId }) => (
   <View>
-    <TextInput
-      style={styles.container}
-      data-testid={testId}
-      placeholder="jestem"
-      testID={testId}
-    />
+    <TextInput style={styles.container} data-testid={testId} testID={testId} />
   </View>
 );
 

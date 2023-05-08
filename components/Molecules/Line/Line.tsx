@@ -30,20 +30,22 @@ const styles = StyleSheet.create({
   text: {
     borderWidth: 2,
     borderStyle: "solid",
-    borderColor: "rgb(229 231 235)",
-    padding: 20,
+    borderColor: "rgb(213, 202, 202)",
+    padding: 10,
     borderRadius: 5,
-    fontSize: 10,
-    lineHeight: 1.25,
+    fontSize: 15,
     fontWeight: "500",
     color: "rgb(156 163 175)",
     alignItems: "center",
     justifyContent: "center",
     alignContent: "center",
     textAlign: "center",
-    backgroundColor: "red",
   },
-  line: { width: 10, borderBottomColor: "gray", borderBottomWidth: 10 },
+  line: {
+    width: 117,
+    borderBottomColor: "rgb(213, 202, 202)",
+    borderBottomWidth: 2,
+  },
 });
 
 export default Line;

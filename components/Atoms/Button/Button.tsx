@@ -29,7 +29,6 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
     textAlign: "center",
-    margin: 5,
     backgroundColor: "rgb(236 72 153)",
     shadowColor: "#94a3b8",
     shadowOffset: {

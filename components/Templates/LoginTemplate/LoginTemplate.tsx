@@ -37,7 +37,21 @@ function LoginTemplate() {
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <Header>Header jestem</Header>
+        <TextLabel
+          testId="test-textLabel-id"
+          color="rgb(82 82 91)"
+          fontSize={14}
+        >
+          Email
+        </TextLabel>
         <Input testId="test-input-id" />
+        <TextLabel
+          testId="test-textLabel-id"
+          color="rgb(82 82 91)"
+          fontSize={14}
+        >
+          Password
+        </TextLabel>
         <Input testId="test-input-id" />
         <CheckboxInput testId="test-checkbox-id" />
         <Button onPress={() => console.log(`hey`)} testId="test-button-id">
@@ -65,9 +79,6 @@ function LoginTemplate() {
         <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
           Przycisk Link
         </LinkButton>
-        <TextLabel testId="test-textLabel-id" color="red" fontSize={50}>
-          Siemaszko
-        </TextLabel>
       </Tile>
     </View>
   );

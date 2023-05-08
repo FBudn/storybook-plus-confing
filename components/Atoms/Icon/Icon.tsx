@@ -75,6 +75,7 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
 const styles = (color: string) =>
   StyleSheet.create({
     container: {
+      flexDirection: "row",
       width: 60,
       height: 60,
       justifyContent: "center",
