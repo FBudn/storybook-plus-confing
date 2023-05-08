@@ -12,7 +12,7 @@ const InputMeta = {
     (Story: any) => (
       <View
         style={{
-          alignItems: "center",
+          alignItems: "stretch",
           justifyContent: "center",
           flex: 1,
           backgroundColor: "white",

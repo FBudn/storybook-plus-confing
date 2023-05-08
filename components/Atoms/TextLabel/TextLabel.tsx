@@ -8,6 +8,7 @@ export interface TextLabelProps {
   testId: string | undefined;
   alignItems?: FlexAlignType | undefined;
   textAlign?: any;
+  width?: string | number;
 }
 
 const TextLabel: React.FC<TextLabelProps> = ({
@@ -17,13 +18,18 @@ const TextLabel: React.FC<TextLabelProps> = ({
   fontSize,
   alignItems,
   textAlign,
+  width,
 }) => {
   return (
     <View
       testID={testId}
-      style={styles(undefined, undefined, alignItems).container}
+      style={
+        styles(undefined, undefined, alignItems, undefined, width).container
+      }
     >
-      <Text style={styles(color, fontSize, undefined, textAlign).text}>
+      <Text
+        style={styles(color, fontSize, undefined, textAlign, undefined).text}
+      >
         {children}
       </Text>
     </View>
@@ -37,7 +43,9 @@ const styles = (
 
   alignItems?: FlexAlignType | undefined,
 
-  textAlign?: any
+  textAlign?: any,
+
+  width?: string | number
 ) =>
   StyleSheet.create({
     text: {

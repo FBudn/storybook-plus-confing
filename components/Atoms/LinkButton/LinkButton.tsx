@@ -28,9 +28,9 @@ const LinkButton: React.FC<LinkButtonProps> = ({
 const styles = StyleSheet.create({
   container: {
     justifyContent: "flex-end",
-    alignItems: "center",
-    alignContent: "center",
-    textAlign: "center",
+    alignItems: "flex-start",
+    alignContent: "flex-start",
+    textAlign: "left",
   },
   text: {
     color: "rgb(82 82 91)",

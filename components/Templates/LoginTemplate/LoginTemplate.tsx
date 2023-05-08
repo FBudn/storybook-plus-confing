@@ -75,9 +75,18 @@ function LoginTemplate() {
         </TextLabel>
         <Line>OR</Line>
         <IconsSection onPressIcon={() => console.log(`hey`)} />
-        <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
-          Przycisk Link
-        </LinkButton>
+        <View style={styles.textAndLink}>
+          <TextLabel
+            testId="test-textLabel-id"
+            fontSize={20}
+            color="rgb(82 82 91)"
+          >
+            Need an account?
+          </TextLabel>
+          <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
+            SIGN UP
+          </LinkButton>
+        </View>
       </Tile>
     </View>
   );
@@ -94,11 +103,10 @@ const styles = StyleSheet.create({
   statusbar: {
     backgroundColor: "rgb(96 165 250)",
   },
-  empty: {
-    flex: 1,
-    width: 100,
-    backgroundColor: "pink",
-    height: 20,
+  textAndLink: {
+    flexDirection: "row",
+    justifyContent: "center",
+    gap: -115,
   },
 });
 
