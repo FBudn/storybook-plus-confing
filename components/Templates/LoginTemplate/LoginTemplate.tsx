@@ -10,6 +10,7 @@ import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import Line from "../../Molecules/Line/Line";
 import Tile from "../../Atoms/Tile/Tile";
+import IconsSection from "../../Molecules/IconsSection/IconsSection";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -73,24 +74,7 @@ function LoginTemplate() {
           Forgot Password?
         </TextLabel>
         <Line>OR</Line>
-        <Icon
-          testId="test-icon1-id"
-          onPressIcon={handleIcon1Press}
-          color="blue"
-          icon="facebook"
-        />
-        <Icon
-          testId="test-icon2-id"
-          onPressIcon={handleIcon2Press}
-          color="red"
-          icon="google"
-        />
-        <Icon
-          testId="test-icon3-id"
-          onPressIcon={handleIcon3Press}
-          color="blue"
-          icon="linkedin"
-        />
+        <IconsSection onPressIcon={() => console.log(`hey`)} />
         <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
           Przycisk Link
         </LinkButton>
