@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match snapshot: 1`] = `
+<View
+  style={
+    {
+      "alignItems": "stretch",
+      "backgroundColor": "white",
+      "borderRadius": 10,
+      "flex": 0.7,
+      "padding": 16,
+      "width": "80%",
+    }
+  }
+  testID="test-tile-id"
+>
+  Tile Test
+</View>
+`;

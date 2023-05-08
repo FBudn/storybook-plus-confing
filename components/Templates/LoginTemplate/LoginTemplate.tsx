@@ -35,7 +35,7 @@ function LoginTemplate() {
   return (
     <View style={styles.container} testID="test-app-id">
       <StatusBar backgroundColor="rgb(96 165 250)" />
-      <Tile>
+      <Tile testId="test-tile-id">
         <Header>Header jestem</Header>
         <Input testId="test-input-id" />
         <Input testId="test-input-id" />
