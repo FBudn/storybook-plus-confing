@@ -69,6 +69,7 @@ const getStories = () => {
     "./components/Atoms/LinkButton/LinkButton.stories.tsx": require("../components/Atoms/LinkButton/LinkButton.stories.tsx"),
     "./components/Atoms/TextLabel/TextLabel.stories.tsx": require("../components/Atoms/TextLabel/TextLabel.stories.tsx"),
     "./components/Atoms/Tile/Tile.stories.tsx": require("../components/Atoms/Tile/Tile.stories.tsx"),
+    "./components/Molecules/CheckboxAndLabel/CheckboxAndLabel.stories.tsx": require("../components/Molecules/CheckboxAndLabel/CheckboxAndLabel.stories.tsx"),
   };
 };
 

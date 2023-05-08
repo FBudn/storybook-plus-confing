@@ -1,12 +1,12 @@
 import React from "react";
-import { View } from "react-native";
+import { View, Text } from "react-native";
 import Tile from "./Tile";
 
 const TileMeta = {
   title: "Atoms/Tile",
   component: Tile,
   args: {
-    children: "Tile stories",
+    testId: "test-tile-id",
   },
   decorators: [
     (Story: any) => (
