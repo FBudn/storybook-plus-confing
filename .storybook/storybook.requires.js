@@ -72,6 +72,7 @@ const getStories = () => {
     "./components/Molecules/CheckboxAndLabel/CheckboxAndLabel.stories.tsx": require("../components/Molecules/CheckboxAndLabel/CheckboxAndLabel.stories.tsx"),
     "./components/Molecules/IconsSection/IconsSection.stories.tsx": require("../components/Molecules/IconsSection/IconsSection.stories.tsx"),
     "./components/Molecules/InputAndLabel/InputAndLabel.stories.tsx": require("../components/Molecules/InputAndLabel/InputAndLabel.stories.tsx"),
+    "./components/Molecules/Line/Line.stories.tsx": require("../components/Molecules/Line/Line.stories.tsx"),
   };
 };
 
