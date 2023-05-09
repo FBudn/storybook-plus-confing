@@ -1,5 +1,5 @@
 import React from "react";
-import { View, StatusBar } from "react-native";
+import { View } from "react-native";
 import IconsSection from "./IconsSection";
 
 const IconsSectionMeta = {
@@ -10,23 +10,26 @@ const IconsSectionMeta = {
   },
   args: {
     testId: `test-iconsSection-id`,
+    children: "Icon jestem ",
+    color: "blue",
+    icon: "facebook",
   },
   decorators: [
-    (Story: any) => {
-      <>
-        <StatusBar backgroundColor="rgb(96 165 250)" />
-        <View
-          style={{
-            flex: 1,
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <Story />
-        </View>
-      </>;
-    },
+    (Story: any) => (
+      <View
+        style={{
+          flex: 1,
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: 15,
+          backgroundColor: "white",
+          width: "100%",
+        }}
+      >
+        <Story />
+      </View>
+    ),
   ],
 };
 
