@@ -10,20 +10,11 @@ import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import Line from "../../Molecules/Line/Line";
 import Tile from "../../Atoms/Tile/Tile";
 import IconsSection from "../../Molecules/IconsSection/IconsSection";
+import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
     console.log(i);
-  };
-
-  const handleIcon1Press = () => {
-    onPressIcon(`Facebook`);
-  };
-  const handleIcon2Press = () => {
-    onPressIcon(`Google`);
-  };
-  const handleIcon3Press = () => {
-    onPressIcon(`LinkedIn`);
   };
 
   const handleLink = () => {
@@ -37,24 +28,8 @@ function LoginTemplate() {
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <Header>LOGIN</Header>
-        <TextLabel
-          testId="test-textLabel-id"
-          color="rgb(82 82 91)"
-          fontSize={14}
-          alignItems="flex-start"
-        >
-          Email
-        </TextLabel>
-        <Input testId="test-input-id" />
-        <TextLabel
-          testId="test-textLabel-id"
-          color="rgb(82 82 91)"
-          fontSize={14}
-          alignItems="flex-start"
-        >
-          Password
-        </TextLabel>
-        <Input testId="test-input-id" />
+        <InputAndLabel> Email </InputAndLabel>
+        <InputAndLabel> Password </InputAndLabel>
         <CheckboxAndLabel
           testId="test-checkboxAndLabel-id"
           infoText="Remember me?"
@@ -73,7 +48,7 @@ function LoginTemplate() {
           Forgot Password?
         </TextLabel>
         <Line>OR</Line>
-        <IconsSection onPressIcon={() => console.log(`hey`)} />
+        <IconsSection onPressIcon={onPressIcon} />
         <View style={styles.textAndLink}>
           <TextLabel
             testId="test-textLabel-id"
