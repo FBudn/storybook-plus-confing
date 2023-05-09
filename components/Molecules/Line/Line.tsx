@@ -8,7 +8,7 @@ export interface LineProps {
 
 const Line: React.FC<LineProps> = ({ children, testId }) => {
   return (
-    <View data-testid={testId} style={styles.container}>
+    <View testID={testId} style={styles.container}>
       <View style={styles.line} />
       <Text data-testid="test-Line-Text" style={styles.text}>
         {children}
