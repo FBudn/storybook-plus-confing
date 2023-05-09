@@ -2,6 +2,12 @@
 
 exports[`Should match snapshot 1`] = `
 <View
+  style={
+    {
+      "alignItems": undefined,
+      "width": "100%",
+    }
+  }
   testID="test-textLabel-id"
 >
   <Text
@@ -9,6 +15,8 @@ exports[`Should match snapshot 1`] = `
       {
         "color": "black",
         "fontSize": 10,
+        "textAlign": undefined,
+        "width": "100%",
       }
     }
   >
