@@ -1,12 +1,9 @@
 import React from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
-import LinkButton from "../../Atoms/LinkButton/LinkButton";
-import TextLabel from "../../Atoms/TextLabel/TextLabel";
-import Line from "../../Molecules/Line/Line";
 import Tile from "../../Atoms/Tile/Tile";
-import IconsSection from "../../Molecules/IconsSection/IconsSection";
 import FormLogin from "../../Organisms/FormLogin/FormLogin";
+import Footer from "../../Organisms/Footer/Footer";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -24,20 +21,14 @@ function LoginTemplate() {
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <FormLogin onButtonClick={handleLink} testId="test-formLogin-id" />
-        <Line>OR</Line>
-        <IconsSection onPressIcon={onPressIcon} />
-        <View style={styles.textAndLink}>
-          <TextLabel
-            testId="test-textLabel-id"
-            fontSize={20}
-            color="rgb(82 82 91)"
-          >
-            Need an account?
-          </TextLabel>
-          <LinkButton testId="test-linkButton-id" onClickLink={handleLink}>
-            SIGN UP
-          </LinkButton>
-        </View>
+        <Footer
+          testId="test-footer-id"
+          onPressIcon={onPressIcon}
+          onPressLink={handleLink}
+          lineText="OR"
+          linkText="SIGN UP"
+          infoText="Need an account?"
+        />
       </Tile>
     </View>
   );

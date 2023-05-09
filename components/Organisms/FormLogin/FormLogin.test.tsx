@@ -7,7 +7,6 @@ import {
 } from "@testing-library/react-native";
 import TestRenderer from "react-test-renderer";
 import FormLogin, { FormLoginProps } from "./FormLogin";
-import "jest-styled-components";
 
 const mockOnButtonClick = jest.fn();
 
