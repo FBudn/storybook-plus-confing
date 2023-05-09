@@ -1,16 +1,16 @@
 import React from "react";
 import { View } from "react-native";
-import FormLogin from "./FormLogin";
+import FormSignUp from "./FormSignUp";
 
-const FormLoginMeta = {
-  title: "Organisms/FormLogin",
-  component: FormLogin,
+const FormSignUpMeta = {
+  title: "Organisms/FormSignUp",
+  component: FormSignUp,
   argTypes: {
     onButtonClick: { action: "Button pressed" },
   },
   args: {
-    children: "FormLogin",
-    testId: "test-formLogin-id",
+    children: "FormSignUp",
+    testId: "test-formSignUp-id",
   },
   decorators: [
     (Story: any) => (
@@ -25,6 +25,6 @@ const FormLoginMeta = {
   ],
 };
 
-export default FormLoginMeta;
+export default FormSignUpMeta;
 
 export const Basic = {};
