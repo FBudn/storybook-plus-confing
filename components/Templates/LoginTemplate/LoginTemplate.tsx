@@ -1,16 +1,12 @@
 import React from "react";
 import { StyleSheet, View, StatusBar } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
-import Button from "../../Atoms/Button/Button";
-import CheckboxAndLabel from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
-import Header from "../../Atoms/Header/Header";
-import Input from "../../Atoms/Input/Input";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import Line from "../../Molecules/Line/Line";
 import Tile from "../../Atoms/Tile/Tile";
 import IconsSection from "../../Molecules/IconsSection/IconsSection";
-import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
+import FormLogin from "../../Organisms/FormLogin/FormLogin";
 
 function LoginTemplate() {
   const onPressIcon = (i: string) => {
@@ -27,26 +23,7 @@ function LoginTemplate() {
     <View style={styles.container} testID="test-app-id">
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
-        <Header>LOGIN</Header>
-        <InputAndLabel testId="test-inputAndLabel-id"> Email </InputAndLabel>
-        <InputAndLabel testId="test-inputAndLabel-id"> Password </InputAndLabel>
-        <CheckboxAndLabel
-          testId="test-checkboxAndLabel-id"
-          infoText="Remember me?"
-          alignItems="flex-start"
-        />
-        <Button onPress={() => console.log(`hey`)} testId="test-button-id">
-          HEY
-        </Button>
-        <TextLabel
-          testId="test-textLabel-id"
-          fontSize={10}
-          color="rgb(82 82 91)"
-          alignItems="flex-end"
-          textAlign="right"
-        >
-          Forgot Password?
-        </TextLabel>
+        <FormLogin onButtonClick={handleLink} testId="test-formLogin-id" />
         <Line>OR</Line>
         <IconsSection onPressIcon={onPressIcon} />
         <View style={styles.textAndLink}>
