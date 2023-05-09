@@ -19,7 +19,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({ onPressIcon, testId }) => {
   };
 
   return (
-    <View data-testid={testId} style={styles.container}>
+    <View testID={testId} style={styles.container}>
       <Icon
         color="red"
         icon="facebook"

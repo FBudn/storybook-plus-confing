@@ -28,8 +28,8 @@ function LoginTemplate() {
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <Header>LOGIN</Header>
-        <InputAndLabel> Email </InputAndLabel>
-        <InputAndLabel> Password </InputAndLabel>
+        <InputAndLabel testId="test-inputAndLabel-id"> Email </InputAndLabel>
+        <InputAndLabel testId="test-inputAndLabel-id"> Password </InputAndLabel>
         <CheckboxAndLabel
           testId="test-checkboxAndLabel-id"
           infoText="Remember me?"
