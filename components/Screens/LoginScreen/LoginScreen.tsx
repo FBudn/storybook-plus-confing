@@ -1,8 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { GestureResponderEvent } from "react-native";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
 
-const LoginPage: React.FC = () => {
+export interface LoginScreenProps {
+  navigation: any;
+}
+
+const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   const onPressButton = (event: GestureResponderEvent) => {
     console.log(event);
   };
@@ -11,14 +15,13 @@ const LoginPage: React.FC = () => {
     console.log(icon);
   };
 
-  const navigate = useNavigate();
-  const onPressLink = (url: string) => {
-    navigate(url);
+  const onPressLink = () => {
+    return navigation.navigate(`SignUpTemplate`);
   };
 
   return (
     <LoginTemplate
-      testId="test-loginPage-id"
+      testId="test-loginScreen-id"
       onPressButton={onPressButton}
       onPressIcon={onPressIcon}
       onPressLink={onPressLink}
@@ -26,4 +29,4 @@ const LoginPage: React.FC = () => {
   );
 };
 
-export default LoginPage;
+export default LoginScreen;

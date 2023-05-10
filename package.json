@@ -4,6 +4,7 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@react-navigation/native": "^6.1.6",
+    "@react-navigation/native-stack": "^6.9.12",
     "@types/react-native": "^0.71.6",
     "expo": "^48.0.9",
     "expo-checkbox": "~2.3.1",
@@ -14,10 +15,10 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.71.4",
+    "react-native-screens": "~3.20.0",
     "react-native-web": "~0.18.7",
     "react-test-renderer": "^18.2.0",
-    "typescript": "^5.0.4",
-    "react-native-screens": "~3.20.0"
+    "typescript": "^5.0.4"
   },
   "devDependencies": {
     "@babel/core": "^7.19.3",

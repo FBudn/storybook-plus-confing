@@ -1,8 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { GestureResponderEvent } from "react-native";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
-const SignUpScreen: React.FC = () => {
+export interface SignUpScreenProps {
+  navigation: any;
+}
+
+const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
   const onPressButton = (event: GestureResponderEvent) => {
     console.log(event);
   };
@@ -10,9 +14,9 @@ const SignUpScreen: React.FC = () => {
   const onPressIcon = (icon: string) => {
     console.log(icon);
   };
-  const navigate = useNavigate();
-  const onPressLink = (url: string) => {
-    navigate(url);
+
+  const onPressLink = () => {
+    return navigation.navigate(`LoginTemplate`);
   };
 
   return (
