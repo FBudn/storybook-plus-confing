@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, TextInput, View } from "react-native";
+import { TextInput, View } from "react-native";
+import InputStyles from "./Input.style";
 
 export interface InputProps {
   testId: string;
@@ -7,19 +8,12 @@ export interface InputProps {
 
 const Input: React.FC<InputProps> = ({ testId }) => (
   <View>
-    <TextInput style={styles.container} data-testid={testId} testID={testId} />
+    <TextInput
+      style={InputStyles.container}
+      data-testid={testId}
+      testID={testId}
+    />
   </View>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    borderRadius: 5,
-    borderWidth: 2,
-    borderStyle: "solid",
-    borderColor: "rgb(214 211 209)",
-    height: 40,
-    width: "100%",
-  },
-});
 
 export default Input;
