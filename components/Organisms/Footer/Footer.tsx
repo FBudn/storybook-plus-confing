@@ -1,9 +1,10 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Line from "../../Molecules/Line/Line";
 import IconsSection from "../../Molecules/IconsSection/IconsSection";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import LinkButton from "../../Atoms/LinkButton/LinkButton";
+import FooterStyles from "./Footer.style";
 
 export interface FooterProps {
   onPressIcon: (i: string) => void;
@@ -23,10 +24,10 @@ const Footer: React.FC<FooterProps> = ({
   lineText,
 }) => {
   return (
-    <View testID={testId} style={styles.container}>
+    <View testID={testId} style={FooterStyles.container}>
       <Line>{lineText}</Line>
       <IconsSection onPressIcon={onPressIcon} />
-      <View style={styles.textAndLink}>
+      <View style={FooterStyles.textAndLink}>
         <TextLabel
           testId="test-textLabel-id"
           fontSize={20}
@@ -41,17 +42,5 @@ const Footer: React.FC<FooterProps> = ({
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "stretch",
-    gap: 10,
-  },
-  textAndLink: {
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: -115,
-  },
-});
 
 export default Footer;

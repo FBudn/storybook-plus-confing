@@ -1,10 +1,11 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
 import CheckboxAndLabel from "../../Molecules/CheckboxAndLabel/CheckboxAndLabel";
 import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
+import FormLoginStyles from "./FormLogin.style";
 
 export interface FormLoginProps {
   onButtonClick: (email: string, password: string, checkbox: boolean) => void;
@@ -13,7 +14,7 @@ export interface FormLoginProps {
 
 const FormLogin: React.FC<FormLoginProps> = ({ onButtonClick, testId }) => {
   return (
-    <View testID={testId} style={styles.container}>
+    <View testID={testId} style={FormLoginStyles.container}>
       <Header>LOGIN</Header>
       <InputAndLabel testId="test-inputAndLabel-id"> Email </InputAndLabel>
       <InputAndLabel testId="test-inputAndLabel-id"> Password </InputAndLabel>
@@ -37,12 +38,5 @@ const FormLogin: React.FC<FormLoginProps> = ({ onButtonClick, testId }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    alignItems: "stretch",
-    gap: 10,
-  },
-});
 
 export default FormLogin;
