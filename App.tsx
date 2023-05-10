@@ -1,12 +1,27 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { GestureResponderEvent, StyleSheet, View } from "react-native";
 import Constants from "expo-constants";
 import LoginTemplate from "./components/Templates/LoginTemplate/LoginTemplate";
 
 function App() {
+  const onPressButton = (event: GestureResponderEvent) => {
+    console.log(event);
+  };
+
+  const onPressIcon = (icon: string) => {
+    console.log(icon);
+  };
+
+  const onPressLink = (event: GestureResponderEvent) => {
+    console.log(event);
+  };
   return (
     <View style={styles.container} testID="test-app-id">
-      <LoginTemplate />
+      <LoginTemplate
+        onPressButton={onPressButton}
+        onPressIcon={onPressIcon}
+        onPressLink={onPressLink}
+      />
     </View>
   );
 }

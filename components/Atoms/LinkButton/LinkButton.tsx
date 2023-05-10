@@ -1,16 +1,21 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import {
+  GestureResponderEvent,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import LinkButtonStyles from "./LinkButton.style";
 
 export interface LinkButtonProps {
   children: React.ReactNode;
-  onClickLink: () => void;
+  onPressLink: (event: GestureResponderEvent) => void;
   testId: string;
 }
 
 const LinkButton: React.FC<LinkButtonProps> = ({
   children,
-  onClickLink,
+  onPressLink,
   testId,
 }) => {
   return (
@@ -18,7 +23,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       <TouchableOpacity
         style={LinkButtonStyles.container}
         testID={testId}
-        onPress={onClickLink}
+        onPress={onPressLink}
       >
         <Text style={LinkButtonStyles.text}> {children} </Text>
       </TouchableOpacity>

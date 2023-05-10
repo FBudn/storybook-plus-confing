@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { GestureResponderEvent, View } from "react-native";
 import Line from "../../Molecules/Line/Line";
 import IconsSection from "../../Molecules/IconsSection/IconsSection";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
@@ -9,7 +9,7 @@ import FooterStyles from "./Footer.style";
 export interface FooterProps {
   onPressIcon: (i: string) => void;
   testId?: string;
-  onPressLink: () => void;
+  onPressLink: (event: GestureResponderEvent) => void;
   infoText: string;
   linkText: string;
   lineText: string;
@@ -35,7 +35,7 @@ const Footer: React.FC<FooterProps> = ({
         >
           {infoText}
         </TextLabel>
-        <LinkButton testId="test-linkButton-id" onClickLink={onPressLink}>
+        <LinkButton testId="test-linkButton-id" onPressLink={onPressLink}>
           {linkText}
         </LinkButton>
       </View>

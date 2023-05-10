@@ -1,5 +1,5 @@
 import React from "react";
-import { View } from "react-native";
+import { GestureResponderEvent, View } from "react-native";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
@@ -8,11 +8,11 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import FormLoginStyles from "./FormLogin.style";
 
 export interface FormLoginProps {
-  onButtonClick: (email: string, password: string, checkbox: boolean) => void;
+  onPressButton: (event: GestureResponderEvent) => void;
   testId?: string;
 }
 
-const FormLogin: React.FC<FormLoginProps> = ({ onButtonClick, testId }) => {
+const FormLogin: React.FC<FormLoginProps> = ({ onPressButton, testId }) => {
   return (
     <View testID={testId} style={FormLoginStyles.container}>
       <Header>LOGIN</Header>
@@ -23,7 +23,7 @@ const FormLogin: React.FC<FormLoginProps> = ({ onButtonClick, testId }) => {
         infoText="Remember me?"
         alignItems="flex-start"
       />
-      <Button onPress={() => console.log(`hey`)} testId="test-button-id">
+      <Button onPressButton={onPressButton} testId="test-button-id">
         LOGIN
       </Button>
       <TextLabel
