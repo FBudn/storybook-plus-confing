@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Icon from "../../Atoms/Icon/Icon";
+import IconsSectionStyles from "./IconsSection.style";
 
 export interface IconsSectionProps {
   onPressIcon: (i: string) => void;
@@ -19,7 +20,7 @@ const IconsSection: React.FC<IconsSectionProps> = ({ onPressIcon, testId }) => {
   };
 
   return (
-    <View testID={testId} style={styles.container}>
+    <View testID={testId} style={IconsSectionStyles.container}>
       <Icon
         color="red"
         icon="facebook"
@@ -43,16 +44,5 @@ const IconsSection: React.FC<IconsSectionProps> = ({ onPressIcon, testId }) => {
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    width: "100%",
-    justifyContent: "center",
-    alignItems: "center",
-    gap: 15,
-    margin: 4,
-  },
-});
 
 export default IconsSection;
