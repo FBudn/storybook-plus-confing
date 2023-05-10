@@ -1,5 +1,6 @@
 import React from "react";
-import { FlexAlignType, StyleSheet, Text, View } from "react-native";
+import { FlexAlignType, Text, View } from "react-native";
+import TextLabelStyles from "./TextLabel.style";
 
 export interface TextLabelProps {
   children: React.ReactNode;
@@ -24,41 +25,20 @@ const TextLabel: React.FC<TextLabelProps> = ({
     <View
       testID={testId}
       style={
-        styles(undefined, undefined, alignItems, undefined, width).container
+        TextLabelStyles(undefined, undefined, alignItems, undefined, width)
+          .container
       }
     >
       <Text
-        style={styles(color, fontSize, undefined, textAlign, undefined).text}
+        style={
+          TextLabelStyles(color, fontSize, undefined, textAlign, undefined).text
+        }
       >
         {children}
       </Text>
     </View>
   );
 };
-
-const styles = (
-  color?: string | undefined,
-
-  fontSize?: number | undefined,
-
-  alignItems?: FlexAlignType | undefined,
-
-  textAlign?: any,
-
-  width?: string | number
-) =>
-  StyleSheet.create({
-    text: {
-      color: `${color}`,
-      fontSize,
-      width: "100%",
-      textAlign,
-    },
-    container: {
-      width: "100%",
-      alignItems,
-    },
-  });
 
 export default TextLabel;
 
