@@ -14,8 +14,14 @@ const FormSignUp: React.FC<FormSignUpProps> = ({ onPressButton, testId }) => {
   return (
     <View testID={testId} style={FormSignUpStyles.container}>
       <Header>SIGN UP</Header>
-      <InputAndLabel testId="test-inputAndLabel-id"> Email </InputAndLabel>
-      <InputAndLabel testId="test-inputAndLabel-id"> Password </InputAndLabel>
+      <InputAndLabel testId="test-inputAndLabel-id" secureText={false}>
+        {" "}
+        Email{" "}
+      </InputAndLabel>
+      <InputAndLabel testId="test-inputAndLabel-id" secureText>
+        {" "}
+        Password{" "}
+      </InputAndLabel>
       <Button onPressButton={onPressButton} testId="test-button-id">
         SIGN UP
       </Button>

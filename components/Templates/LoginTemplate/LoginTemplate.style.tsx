@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const LoginTemplateStyles = StyleSheet.create({
   container: {
@@ -7,14 +7,7 @@ const LoginTemplateStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     margin: 0,
-  },
-  statusbar: {
-    backgroundColor: "rgb(96 165 250)",
-  },
-  textAndLink: {
-    flexDirection: "row",
-    justifyContent: "center",
-    gap: -115,
+    minHeight: Math.round(Dimensions.get("window").height),
   },
 });
 

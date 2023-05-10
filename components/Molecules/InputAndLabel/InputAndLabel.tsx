@@ -7,10 +7,15 @@ import InputAndLabelStyles from "./InputAndLabel.style";
 export interface InputAndLabelProps {
   children: React.ReactNode;
   testId?: string;
+  secureText: boolean;
 }
 
 export type InputRef = HTMLInputElement;
-const InputAndLabel: React.FC<InputAndLabelProps> = ({ children, testId }) => (
+const InputAndLabel: React.FC<InputAndLabelProps> = ({
+  children,
+  testId,
+  secureText,
+}) => (
   <View testID={testId} style={InputAndLabelStyles.container}>
     <TextLabel
       color="rgb(82 82 91)"
@@ -20,7 +25,7 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({ children, testId }) => (
     >
       {children}
     </TextLabel>
-    <Input testId="test-input-id" />
+    <Input testId="test-input-id" secureText={secureText} />
   </View>
 );
 

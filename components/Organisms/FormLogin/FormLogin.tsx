@@ -16,8 +16,12 @@ const FormLogin: React.FC<FormLoginProps> = ({ onPressButton, testId }) => {
   return (
     <View testID={testId} style={FormLoginStyles.container}>
       <Header>LOGIN</Header>
-      <InputAndLabel testId="test-inputAndLabel-id"> Email </InputAndLabel>
-      <InputAndLabel testId="test-inputAndLabel-id"> Password </InputAndLabel>
+      <InputAndLabel testId="test-inputAndLabel-id" secureText={false}>
+        Email
+      </InputAndLabel>
+      <InputAndLabel testId="test-inputAndLabel-id" secureText>
+        Password
+      </InputAndLabel>
       <CheckboxAndLabel
         testId="test-checkboxAndLabel-id"
         infoText="Remember me?"

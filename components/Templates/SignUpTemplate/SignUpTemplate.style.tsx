@@ -1,4 +1,4 @@
-import { StyleSheet } from "react-native";
+import { Dimensions, StyleSheet } from "react-native";
 
 const SignUpTemplateStyles = StyleSheet.create({
   container: {
@@ -7,6 +7,7 @@ const SignUpTemplateStyles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     margin: 0,
+    minHeight: Math.round(Dimensions.get("window").height),
   },
   statusbar: {
     backgroundColor: "rgb(96 165 250)",
