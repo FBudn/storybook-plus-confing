@@ -6,6 +6,7 @@ import InputAndLabel, { InputAndLabelProps } from "./InputAndLabel";
 const props: InputAndLabelProps = {
   testId: `test-inputAndLabel-id`,
   children: `InputAndLabel Test`,
+  secureText: true,
 };
 
 test(`Should render InputAndLabel component`, () => {

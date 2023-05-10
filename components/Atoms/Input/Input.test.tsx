@@ -6,6 +6,7 @@ import Input, { InputProps } from "./Input";
 
 const props: InputProps = {
   testId: `test-input-id`,
+  secureText: true,
 };
 
 test(`Should render Input component`, () => {
