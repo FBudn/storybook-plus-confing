@@ -1,6 +1,7 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, View } from "react-native";
+import { TouchableOpacity, View } from "react-native";
 import { AntDesign, Entypo, FontAwesome } from "@expo/vector-icons";
+import IconStyles from "./Icon.style";
 
 export interface IconProps {
   onPressIcon: () => void;
@@ -15,7 +16,7 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
       return (
         <View>
           <TouchableOpacity
-            style={styles(color).container}
+            style={IconStyles(color).container}
             testID={testId}
             onPress={onPressIcon}
           >
@@ -32,7 +33,7 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
       return (
         <View>
           <TouchableOpacity
-            style={styles(color).container}
+            style={IconStyles(color).container}
             testID={testId}
             onPress={onPressIcon}
           >
@@ -44,7 +45,7 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
       return (
         <View>
           <TouchableOpacity
-            style={styles(color).container}
+            style={IconStyles(color).container}
             testID={testId}
             onPress={onPressIcon}
           >
@@ -57,7 +58,7 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
       return (
         <View>
           <TouchableOpacity
-            style={styles(color).container}
+            style={IconStyles(color).container}
             onPress={onPressIcon}
           >
             <FontAwesome
@@ -71,23 +72,5 @@ const Icon: React.FC<IconProps> = ({ onPressIcon, color, icon, testId }) => {
       );
   }
 };
-
-const styles = (color: string) =>
-  StyleSheet.create({
-    container: {
-      flexDirection: "row",
-      width: 60,
-      height: 60,
-      justifyContent: "center",
-      alignItems: "center",
-      padding: 8,
-      fontSize: 1,
-      borderRadius: 100,
-      borderStyle: "solid",
-      borderWidth: 2,
-      color: `${color}`,
-      borderColor: `${color}`,
-    },
-  });
 
 export default Icon;
