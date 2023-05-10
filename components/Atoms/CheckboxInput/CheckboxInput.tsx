@@ -1,6 +1,6 @@
 import Checkbox from "expo-checkbox";
 import React from "react";
-import CheckboxInputstyles from "./CheckboxInput.style";
+import CheckboxInputStyles from "./CheckboxInput.style";
 
 export interface CheckboxInputProps {
   testId: string;
@@ -8,7 +8,7 @@ export interface CheckboxInputProps {
 
 // export type CheckboxRef = HTMLInputElement;
 const CheckboxInput: React.FC<CheckboxInputProps> = ({ testId }) => {
-  return <Checkbox style={CheckboxInputstyles.container} testID={testId} />;
+  return <Checkbox style={CheckboxInputStyles.container} testID={testId} />;
 };
 
 export default CheckboxInput;

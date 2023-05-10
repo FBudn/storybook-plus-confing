@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const Buttonstyles = StyleSheet.create({
+const ButtonStyles = StyleSheet.create({
   container: {
     maxHeight: 40,
     height: 40,
@@ -21,4 +21,4 @@ const Buttonstyles = StyleSheet.create({
   text: { color: "white", fontWeight: "bold" },
 });
 
-export default Buttonstyles;
+export default ButtonStyles;

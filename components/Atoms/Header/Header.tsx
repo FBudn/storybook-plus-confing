@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { View, Text } from "react-native";
+import HeaderStyles from "./Header.style";
 
 export interface HeaderProps {
   children: string;
@@ -8,21 +9,10 @@ export interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ children, testId }) => {
   return (
-    <View style={styles.container} testID={testId}>
-      <Text style={styles.text}> {children} </Text>
+    <View style={HeaderStyles.container} testID={testId}>
+      <Text style={HeaderStyles.text}> {children} </Text>
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flexDirection: "row",
-    alignItems: "center",
-  },
-  text: {
-    fontWeight: "bold",
-    color: "rgb(82 82 91)",
-  },
-});
 
 export default Header;

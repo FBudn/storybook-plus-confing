@@ -1,6 +1,6 @@
 import { StyleSheet } from "react-native";
 
-const CheckboxInputstyles = StyleSheet.create({
+const CheckboxInputStyles = StyleSheet.create({
   container: {
     maxHeight: 30,
     width: 30,
@@ -11,4 +11,4 @@ const CheckboxInputstyles = StyleSheet.create({
   },
 });
 
-export default CheckboxInputstyles;
+export default CheckboxInputStyles;
