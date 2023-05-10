@@ -1,7 +1,8 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
 import Input from "../../Atoms/Input/Input";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
+import InputAndLabelStyles from "./InputAndLabel.style";
 
 export interface InputAndLabelProps {
   children: React.ReactNode;
@@ -10,7 +11,7 @@ export interface InputAndLabelProps {
 
 export type InputRef = HTMLInputElement;
 const InputAndLabel: React.FC<InputAndLabelProps> = ({ children, testId }) => (
-  <View testID={testId} style={styles.container}>
+  <View testID={testId} style={InputAndLabelStyles.container}>
     <TextLabel
       color="rgb(82 82 91)"
       textAlign="left"
@@ -22,12 +23,5 @@ const InputAndLabel: React.FC<InputAndLabelProps> = ({ children, testId }) => (
     <Input testId="test-input-id" />
   </View>
 );
-
-const styles = StyleSheet.create({
-  container: {
-    gap: 1,
-    width: "100%",
-  },
-});
 
 export default InputAndLabel;
