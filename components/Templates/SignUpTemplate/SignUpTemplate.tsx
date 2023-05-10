@@ -31,8 +31,8 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
           onPressIcon={onPressIcon}
           onPressLink={onPressLink}
           lineText="OR"
-          linkText="SIGN UP"
-          infoText="Need an account?"
+          linkText="LOGIN"
+          infoText="Already an user?"
         />
       </Tile>
     </View>

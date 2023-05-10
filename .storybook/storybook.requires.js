@@ -76,6 +76,8 @@ const getStories = () => {
     "./components/Organisms/Footer/Footer.stories.tsx": require("../components/Organisms/Footer/Footer.stories.tsx"),
     "./components/Organisms/FormLogin/FormLogin.stories.tsx": require("../components/Organisms/FormLogin/FormLogin.stories.tsx"),
     "./components/Organisms/FormSignUp/FormSignUp.stories.tsx": require("../components/Organisms/FormSignUp/FormSignUp.stories.tsx"),
+    "./components/Templates/LoginTemplate/LoginTemplate.stories.tsx": require("../components/Templates/LoginTemplate/LoginTemplate.stories.tsx"),
+    "./components/Templates/SignUpTemplate/SignUpTemplate.stories.tsx": require("../components/Templates/SignUpTemplate/SignUpTemplate.stories.tsx"),
   };
 };
 

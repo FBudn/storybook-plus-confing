@@ -13,7 +13,7 @@ export interface FormSignUpProps {
 const FormSignUp: React.FC<FormSignUpProps> = ({ onPressButton, testId }) => {
   return (
     <View testID={testId} style={FormSignUpStyles.container}>
-      <Header>LOGIN</Header>
+      <Header>SIGN UP</Header>
       <InputAndLabel testId="test-inputAndLabel-id"> Email </InputAndLabel>
       <InputAndLabel testId="test-inputAndLabel-id"> Password </InputAndLabel>
       <Button onPressButton={onPressButton} testId="test-button-id">
