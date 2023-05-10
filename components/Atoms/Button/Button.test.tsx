@@ -4,9 +4,9 @@ import "@testing-library/jest-native/extend-expect";
 import TestRenderer from "react-test-renderer";
 import Button, { ButtonProps } from "./Button";
 
-const mockOnButtonClick = jest.fn();
+const mockOnPressButton = jest.fn();
 const props: ButtonProps = {
-  onPress: mockOnButtonClick,
+  onPressButton: mockOnPressButton,
   children: `test test`,
   testId: `test-button-id`,
 };
@@ -57,9 +57,9 @@ test(`Should render button and handle onClick`, () => {
   render(<Button {...props} />);
   const ButtonElement = screen.getByTestId(`test-button-id`);
   expect(ButtonElement).toBeOnTheScreen();
-  expect(mockOnButtonClick).toBeCalledTimes(0);
+  expect(mockOnPressButton).toBeCalledTimes(0);
   fireEvent.press(ButtonElement);
-  expect(mockOnButtonClick).toBeCalledTimes(1);
+  expect(mockOnPressButton).toBeCalledTimes(1);
 });
 
 // import "@testing-library/jest-native/extend-expect";

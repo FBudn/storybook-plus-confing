@@ -8,10 +8,10 @@ import {
 import TestRenderer from "react-test-renderer";
 import FormSignUp, { FormSignUpProps } from "./FormSignUp";
 
-const mockOnButtonClick = jest.fn();
+const mockOnPressButton = jest.fn();
 
 const props: FormSignUpProps = {
-  onButtonClick: mockOnButtonClick,
+  onPressButton: mockOnPressButton,
   testId: `test-formSignup-id`,
 };
 
@@ -59,7 +59,7 @@ test(`Should render and handle onButtonClick`, () => {
 
   const ButtonElement = within(FormSignUpElement).getByTestId(`test-button-id`);
   expect(ButtonElement).toBeOnTheScreen();
-  expect(mockOnButtonClick).toBeCalledTimes(0);
+  expect(mockOnPressButton).toBeCalledTimes(0);
   fireEvent.press(ButtonElement);
-  expect(mockOnButtonClick).toBeCalledTimes(1);
+  expect(mockOnPressButton).toBeCalledTimes(1);
 });
