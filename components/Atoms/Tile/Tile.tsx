@@ -1,5 +1,6 @@
 import React from "react";
-import { StyleSheet, View } from "react-native";
+import { View } from "react-native";
+import TileStyles from "./Tile.style";
 
 export interface TileProps {
   children: any;
@@ -8,22 +9,10 @@ export interface TileProps {
 
 const Tile: React.FC<TileProps> = ({ children, testId }) => {
   return (
-    <View testID={testId} style={styles.container}>
+    <View testID={testId} style={TileStyles.container}>
       {children}
     </View>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 0.7,
-    backgroundColor: "white",
-    borderRadius: 10,
-    width: "80%",
-    padding: 20,
-    alignItems: "stretch",
-    gap: 10,
-  },
-});
 
 export default Tile;
