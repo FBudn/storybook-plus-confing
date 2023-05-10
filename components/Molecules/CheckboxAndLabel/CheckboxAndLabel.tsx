@@ -1,7 +1,8 @@
 import React from "react";
-import { FlexAlignType, StyleSheet, View } from "react-native";
+import { FlexAlignType, View } from "react-native";
 import CheckboxInput from "../../Atoms/CheckboxInput/CheckboxInput";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
+import CheckboxAndLabelStyles from "./CheckboxAndLabel.style";
 
 export interface CheckboxAndLabelProps {
   infoText: React.ReactNode;
@@ -15,7 +16,10 @@ const CheckboxAndLabel: React.FC<CheckboxAndLabelProps> = ({
   testId,
   alignItems,
 }) => (
-  <View data-testid={testId} style={styles(alignItems).container}>
+  <View
+    data-testid={testId}
+    style={CheckboxAndLabelStyles(alignItems).container}
+  >
     <CheckboxInput testId="test-checkbox-id" />
     <TextLabel
       color="rgb(82 82 91)"
@@ -27,18 +31,5 @@ const CheckboxAndLabel: React.FC<CheckboxAndLabelProps> = ({
     </TextLabel>
   </View>
 );
-
-const styles = (alignItems?: FlexAlignType | undefined) =>
-  StyleSheet.create({
-    container: {
-      flexDirection: "row",
-      width: "100%",
-      justifyContent: "flex-start",
-      alignItems: "center",
-      gap: 3,
-      color: "rgb(82 82 91)",
-      // margin: 5 0 5 0,
-    },
-  });
 
 export default CheckboxAndLabel;
