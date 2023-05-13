@@ -7,7 +7,7 @@ import Footer from "../../Organisms/Footer/Footer";
 import LoginTemplateStyles from "./LoginTemplate.style";
 
 export interface LoginTemplateProps {
-  onPressButton: () => void;
+  onPressButton: any;
   onPressIcon: (icon: string) => void;
   onPressLink: (event: GestureResponderEvent) => void;
   testId?: string;
@@ -23,14 +23,12 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 
   setEmailValue = (e: any) => {
     emailValue = e.target.value;
-    return emailValue;
   };
 
   let [passwordValue, setPasswordValue] = useState("");
 
   setPasswordValue = (e: any) => {
     passwordValue = e.target.value;
-    return passwordValue;
   };
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");

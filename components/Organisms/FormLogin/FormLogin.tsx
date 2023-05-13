@@ -8,7 +8,7 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import FormLoginStyles from "./FormLogin.style";
 
 export interface FormLoginProps {
-  onPressButton: () => void;
+  onPressButton: any;
   testId?: string;
   setEmailValue: (e: any) => void;
   setPasswordValue: (e: any) => void;
