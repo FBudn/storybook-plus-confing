@@ -1,12 +1,19 @@
 import React from "react";
-import { render, screen, within } from "@testing-library/react-native";
+import {
+  fireEvent,
+  render,
+  screen,
+  within,
+} from "@testing-library/react-native";
 import TestRenderer from "react-test-renderer";
 import InputAndLabel, { InputAndLabelProps } from "./InputAndLabel";
 
+const mockInputFunction = jest.fn();
 const props: InputAndLabelProps = {
   testId: `test-inputAndLabel-id`,
   children: `InputAndLabel Test`,
   secureText: true,
+  setInputValue: mockInputFunction,
 };
 
 test(`Should render InputAndLabel component`, () => {
@@ -50,4 +57,18 @@ test(`Should redner input element`, () => {
   const InputElement =
     within(InputAndLabelElement).getByTestId(`test-input-id`);
   expect(InputElement).toBeOnTheScreen();
+});
+
+test(`Should render Input and handle setInputValue`, () => {
+  render(<InputAndLabel {...props} />);
+  const InputAndLabelElement = screen.getByTestId(`test-inputAndLabel-id`);
+  expect(InputAndLabelElement).toBeOnTheScreen();
+
+  const InputElement =
+    within(InputAndLabelElement).getByTestId(`test-input-id`);
+  expect(InputElement).toBeOnTheScreen();
+
+  expect(mockInputFunction).toBeCalledTimes(0);
+  fireEvent.press(InputElement);
+  expect(mockInputFunction).toBeCalledTimes(1);
 });

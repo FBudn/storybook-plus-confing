@@ -9,10 +9,12 @@ import TestRenderer from "react-test-renderer";
 import FormSignUp, { FormSignUpProps } from "./FormSignUp";
 
 const mockOnPressButton = jest.fn();
-
+const mockInputFunction = jest.fn();
 const props: FormSignUpProps = {
   onPressButton: mockOnPressButton,
   testId: `test-formSignup-id`,
+  setEmailValue: mockInputFunction,
+  setPasswordValue: mockInputFunction,
 };
 
 test(`Should render FormSignUp component`, () => {
@@ -62,4 +64,17 @@ test(`Should render and handle onButtonClick`, () => {
   expect(mockOnPressButton).toBeCalledTimes(0);
   fireEvent.press(ButtonElement);
   expect(mockOnPressButton).toBeCalledTimes(1);
+});
+
+test(`Should render and handle inputFunction`, () => {
+  render(<FormSignUp {...props} />);
+  const FormSignUpElement = screen.getByTestId(`test-formSignup-id`);
+  expect(FormSignUpElement).toBeOnTheScreen();
+
+  const InputElement = within(FormSignUpElement).getByTestId(`test-input-id`);
+  expect(InputElement).toBeOnTheScreen();
+
+  expect(mockInputFunction).toBeCalledTimes(0);
+  fireEvent.changeText(InputElement);
+  expect(mockInputFunction).toBeCalledTimes(1);
 });

@@ -9,10 +9,13 @@ import TestRenderer from "react-test-renderer";
 import FormLogin, { FormLoginProps } from "./FormLogin";
 
 const mockonPressButton = jest.fn();
+const mockInputFunction = jest.fn();
 
 const props: FormLoginProps = {
   onPressButton: mockonPressButton,
   testId: `test-formLogin-id`,
+  setEmailValue: mockInputFunction,
+  setPasswordValue: mockInputFunction,
 };
 
 test(`Should render FormLogin component`, () => {
@@ -72,4 +75,17 @@ test(`CheckboxInput should not be checked`, () => {
     within(ChecboxAndLabelElem).getByTestId(`test-checkbox-id`);
   expect(CheckboxInput).toBeOnTheScreen();
   expect(CheckboxInput).toBeUndefined();
+});
+
+test(`Should render and handle inputFunction`, () => {
+  render(<FormLogin {...props} />);
+  const FormLoginElement = screen.getByTestId(`test-formLogin-id`);
+  expect(FormLoginElement).toBeOnTheScreen();
+
+  const InputElement = within(FormLoginElement).getByTestId(`test-input-id`);
+  expect(InputElement).toBeOnTheScreen();
+
+  expect(mockInputFunction).toBeCalledTimes(0);
+  fireEvent.changeText(InputElement);
+  expect(mockInputFunction).toBeCalledTimes(1);
 });
