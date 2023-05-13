@@ -21,6 +21,7 @@ const styles = (display: any) =>
   StyleSheet.create({
     container: {
       flex: 1,
+      width: 100,
       alignItems: "center",
       fontSize: 20,
       zIndex: 100,

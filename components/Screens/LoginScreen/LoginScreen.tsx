@@ -1,6 +1,5 @@
 import React from "react";
 import LoginTemplate from "../../Templates/LoginTemplate/LoginTemplate";
-import ShowLogs from "../../Atoms/ShowLogs";
 
 export interface LoginScreenProps {
   navigation: any;
@@ -8,13 +7,8 @@ export interface LoginScreenProps {
 
 const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
   const onPressButton = (email: string, password: string) => {
-    return <ShowLogs email={email} password={password} display="flex" />;
-    // console.log(`${email}, ${password}`);
+    alert(`${email}, ${password}`);
   };
-
-  /* const handleButtonPress = (email: any, password: any) => {
-    return onPressButton();
-  }; */
 
   const onPressIcon = (icon: string) => {
     console.log(icon);

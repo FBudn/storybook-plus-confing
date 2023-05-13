@@ -21,14 +21,18 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 }) => {
   let [emailValue, setEmailValue] = useState("");
 
-  setEmailValue = (e: any) => {
-    emailValue = e.target.value;
+  setEmailValue = (email: any) => {
+    emailValue = email;
   };
 
   let [passwordValue, setPasswordValue] = useState("");
 
-  setPasswordValue = (e: any) => {
-    passwordValue = e.target.value;
+  setPasswordValue = (password: any) => {
+    passwordValue = password;
+  };
+
+  const handleButtonPress = () => {
+    onPressButton(emailValue, passwordValue);
   };
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
@@ -38,7 +42,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <FormLogin
-          onPressButton={onPressButton}
+          onPressButton={handleButtonPress}
           setEmailValue={setEmailValue}
           setPasswordValue={setPasswordValue}
           testId="test-formLogin-id"
