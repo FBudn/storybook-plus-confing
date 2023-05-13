@@ -7,11 +7,7 @@ export interface SignUpScreenProps {
 
 const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
   const onPressButton = (email: string, password: string) => {
-    console.log(`${email}, ${password}`);
-  };
-
-  const handleButtonPress = () => {
-    return onPressButton;
+    alert(`${email}, ${password}`);
   };
 
   const onPressIcon = (icon: string) => {
@@ -25,7 +21,7 @@ const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
   return (
     <SignUpTemplate
       testId="test-signUpScreen-id"
-      onPressButton={handleButtonPress}
+      onPressButton={onPressButton}
       onPressIcon={onPressIcon}
       onPressLink={onPressLink}
     />

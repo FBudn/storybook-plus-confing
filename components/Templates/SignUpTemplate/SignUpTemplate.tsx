@@ -7,7 +7,7 @@ import Footer from "../../Organisms/Footer/Footer";
 import SignUpTemplateStyles from "./SignUpTemplate.style";
 
 export interface SignUpTemplateProps {
-  onPressButton: () => void;
+  onPressButton: any;
   onPressIcon: (icon: string) => void;
   onPressLink: (event: GestureResponderEvent) => void;
   testId?: string;
@@ -21,16 +21,18 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
 }) => {
   let [emailValue, setEmailValue] = useState("");
 
-  setEmailValue = (e: any) => {
-    emailValue = e.target.value;
-    return emailValue;
+  setEmailValue = (email: any) => {
+    emailValue = email;
   };
 
   let [passwordValue, setPasswordValue] = useState("");
 
-  setPasswordValue = (e: any) => {
-    passwordValue = e.target.value;
-    return passwordValue;
+  setPasswordValue = (password: any) => {
+    passwordValue = password;
+  };
+
+  const handleButtonPress = () => {
+    onPressButton(emailValue, passwordValue);
   };
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
@@ -40,7 +42,7 @@ const SignUpTemplate: React.FC<SignUpTemplateProps> = ({
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <FormSignUp
-          onPressButton={onPressButton}
+          onPressButton={handleButtonPress}
           setEmailValue={setEmailValue}
           setPasswordValue={setPasswordValue}
         />
