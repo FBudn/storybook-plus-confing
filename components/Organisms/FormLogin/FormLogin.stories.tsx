@@ -13,6 +13,7 @@ const FormLoginMeta = {
   args: {
     children: "FormLogin",
     testId: "test-formLogin-id",
+    secureText: false,
   },
   decorators: [
     (Story: any) => (

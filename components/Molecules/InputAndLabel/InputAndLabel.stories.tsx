@@ -11,7 +11,7 @@ const InputAndLabelMeta = {
   args: {
     children: "InputAndLabel",
     testId: "test-inputAndLabel-id",
-    secureText: "boolean",
+    secureText: false,
   },
   decorators: [
     (Story: any) => (

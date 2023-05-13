@@ -10,7 +10,7 @@ const InputMeta = {
   },
   args: {
     testId: "test-input-id",
-    secureText: "boolean",
+    secureText: false,
   },
   decorators: [
     (Story: any) => (
