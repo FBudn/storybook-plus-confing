@@ -1,5 +1,5 @@
 import React from "react";
-import { GestureResponderEvent, View } from "react-native";
+import { View } from "react-native";
 import Button from "../../Atoms/Button/Button";
 import Header from "../../Atoms/Header/Header";
 import TextLabel from "../../Atoms/TextLabel/TextLabel";
@@ -8,18 +8,33 @@ import InputAndLabel from "../../Molecules/InputAndLabel/InputAndLabel";
 import FormLoginStyles from "./FormLogin.style";
 
 export interface FormLoginProps {
-  onPressButton: (event: GestureResponderEvent) => void;
+  onPressButton: () => void;
   testId?: string;
+  setEmailValue: (e: any) => void;
+  setPasswordValue: (e: any) => void;
 }
 
-const FormLogin: React.FC<FormLoginProps> = ({ onPressButton, testId }) => {
+const FormLogin: React.FC<FormLoginProps> = ({
+  onPressButton,
+  testId,
+  setEmailValue,
+  setPasswordValue,
+}) => {
   return (
     <View testID={testId} style={FormLoginStyles.container}>
       <Header>LOGIN</Header>
-      <InputAndLabel testId="test-inputAndLabel-id" secureText={false}>
+      <InputAndLabel
+        testId="test-inputAndLabel-id"
+        secureText={false}
+        setInputValue={setEmailValue}
+      >
         Email
       </InputAndLabel>
-      <InputAndLabel testId="test-inputAndLabel-id" secureText>
+      <InputAndLabel
+        testId="test-inputAndLabel-id"
+        secureText
+        setInputValue={setPasswordValue}
+      >
         Password
       </InputAndLabel>
       <CheckboxAndLabel

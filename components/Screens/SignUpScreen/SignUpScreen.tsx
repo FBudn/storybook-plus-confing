@@ -1,5 +1,4 @@
 import React from "react";
-import { GestureResponderEvent } from "react-native";
 import SignUpTemplate from "../../Templates/SignUpTemplate/SignUpTemplate";
 
 export interface SignUpScreenProps {
@@ -7,8 +6,12 @@ export interface SignUpScreenProps {
 }
 
 const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
-  const onPressButton = (event: GestureResponderEvent) => {
-    console.log(event);
+  const onPressButton = (email: string, password: string) => {
+    console.log(`${email}, ${password}`);
+  };
+
+  const handleButtonPress = () => {
+    return onPressButton;
   };
 
   const onPressIcon = (icon: string) => {
@@ -22,7 +25,7 @@ const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
   return (
     <SignUpTemplate
       testId="test-signUpScreen-id"
-      onPressButton={onPressButton}
+      onPressButton={handleButtonPress}
       onPressIcon={onPressIcon}
       onPressLink={onPressLink}
     />

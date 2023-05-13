@@ -1,14 +1,9 @@
 import React from "react";
-import {
-  TouchableOpacity,
-  Text,
-  View,
-  GestureResponderEvent,
-} from "react-native";
+import { TouchableOpacity, Text, View } from "react-native";
 import ButtonStyles from "./Button.style";
 
 export interface ButtonProps {
-  onPressButton: (Event: GestureResponderEvent) => void;
+  onPressButton: () => void;
   children: string;
   testId: string;
 }
