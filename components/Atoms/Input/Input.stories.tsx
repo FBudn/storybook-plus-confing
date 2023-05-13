@@ -5,8 +5,12 @@ import Input from "./Input";
 const InputMeta = {
   title: "Atoms/Input",
   component: Input,
+  argTypes: {
+    setInputValue: { action: "Input value changed " },
+  },
   args: {
     testId: "test-input-id",
+    secureText: "boolean",
   },
   decorators: [
     (Story: any) => (

@@ -6,7 +6,9 @@ const FormLoginMeta = {
   title: "Organisms/FormLogin",
   component: FormLogin,
   argTypes: {
-    onButtonClick: { action: "Button pressed" },
+    onPressButton: { action: "Button pressed" },
+    setEmailValue: { action: "Email value changed" },
+    setPasswordValue: { action: "Password value changed" },
   },
   args: {
     children: "FormLogin",
