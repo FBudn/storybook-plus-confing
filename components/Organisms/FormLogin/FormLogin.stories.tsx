@@ -9,11 +9,13 @@ const FormLoginMeta = {
     onPressButton: { action: "Button pressed" },
     setEmailValue: { action: "Email value changed" },
     setPasswordValue: { action: "Password value changed" },
+    setCheckboxValue: { action: "Checkbox checked" },
   },
   args: {
     children: "FormLogin",
     testId: "test-formLogin-id",
     secureText: false,
+    checkboxValue: false,
   },
   decorators: [
     (Story: any) => (

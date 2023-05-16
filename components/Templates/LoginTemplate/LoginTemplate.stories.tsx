@@ -9,9 +9,11 @@ const LoginTemplateMeta = {
     onPressButton: { action: "Button pressed" },
     onPressIcon: { action: "Icon pressed" },
     onPressLink: { action: "Link pressed" },
+    setCheckboxValue: { action: "Checkbox checked" },
   },
   args: {
     testId: "test-LoginTemplate-id",
+    checboxValue: false,
   },
   decorators: [
     (Story: any) => (
