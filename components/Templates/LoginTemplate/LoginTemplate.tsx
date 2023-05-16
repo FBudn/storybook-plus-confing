@@ -31,8 +31,10 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
     passwordValue = password;
   };
 
+  const [checkboxValue, setCheckboxValue] = useState(false);
+
   const handleButtonPress = () => {
-    onPressButton(emailValue, passwordValue);
+    onPressButton(emailValue, passwordValue, checkboxValue);
   };
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
@@ -45,6 +47,8 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           onPressButton={handleButtonPress}
           setEmailValue={setEmailValue}
           setPasswordValue={setPasswordValue}
+          setCheckboxValue={setCheckboxValue}
+          checkboxValue={checkboxValue}
           testId="test-formLogin-id"
         />
         <Footer

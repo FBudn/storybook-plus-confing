@@ -8,6 +8,8 @@ export interface CheckboxAndLabelProps {
   infoText: React.ReactNode;
   testId?: string;
   alignItems: FlexAlignType | undefined;
+  setCheckboxValue: any;
+  checkboxValue: any;
 }
 
 export type CheckboxRef = HTMLInputElement;
@@ -15,12 +17,18 @@ const CheckboxAndLabel: React.FC<CheckboxAndLabelProps> = ({
   infoText,
   testId,
   alignItems,
+  setCheckboxValue,
+  checkboxValue,
 }) => (
   <View
     data-testid={testId}
     style={CheckboxAndLabelStyles(alignItems).container}
   >
-    <CheckboxInput testId="test-checkbox-id" />
+    <CheckboxInput
+      testId="test-checkbox-id"
+      setCheckboxValue={setCheckboxValue}
+      checkboxValue={checkboxValue}
+    />
     <TextLabel
       color="rgb(82 82 91)"
       fontSize={10}

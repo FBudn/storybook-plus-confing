@@ -12,6 +12,8 @@ export interface FormLoginProps {
   testId?: string;
   setEmailValue: (e: any) => void;
   setPasswordValue: (e: any) => void;
+  setCheckboxValue: any;
+  checkboxValue: boolean;
 }
 
 const FormLogin: React.FC<FormLoginProps> = ({
@@ -19,6 +21,8 @@ const FormLogin: React.FC<FormLoginProps> = ({
   testId,
   setEmailValue,
   setPasswordValue,
+  setCheckboxValue,
+  checkboxValue,
 }) => {
   return (
     <View testID={testId} style={FormLoginStyles.container}>
@@ -41,6 +45,8 @@ const FormLogin: React.FC<FormLoginProps> = ({
         testId="test-checkboxAndLabel-id"
         infoText="Remember me?"
         alignItems="flex-start"
+        setCheckboxValue={setCheckboxValue}
+        checkboxValue={checkboxValue}
       />
       <Button onPressButton={onPressButton} testId="test-button-id">
         LOGIN

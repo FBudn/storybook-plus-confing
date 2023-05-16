@@ -6,8 +6,12 @@ export interface LoginScreenProps {
 }
 
 const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
-  const onPressButton = (email: string, password: string) => {
-    alert(`${email}, ${password}`);
+  const onPressButton = (
+    email: string,
+    password: string,
+    checkboxValue: boolean
+  ) => {
+    alert(`${email}, ${password}, ${checkboxValue}`);
   };
 
   const onPressIcon = (icon: string) => {
