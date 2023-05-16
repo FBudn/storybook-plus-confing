@@ -3,10 +3,13 @@ import { render, screen, within } from "@testing-library/react-native";
 import TestRenderer from "react-test-renderer";
 import CheckboxAndLabel, { CheckboxAndLabelProps } from "./CheckboxAndLabel";
 
+const mockSetCheckboxValue = jest.fn();
 const props: CheckboxAndLabelProps = {
   infoText: `CheckboxAndLabel Test`,
   testId: `test-checkboxAndLabel-id`,
   alignItems: `flex-start`,
+  setCheckboxValue: mockSetCheckboxValue,
+  checkboxValue: false,
 };
 
 test(`Should render CheckboxAndLabel component`, () => {

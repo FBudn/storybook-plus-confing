@@ -3,8 +3,11 @@ import { render, screen } from "@testing-library/react-native";
 import TestRenderer from "react-test-renderer";
 import CheckboxInput, { CheckboxInputProps } from "./CheckboxInput";
 
+const mockSetCheckboxValue = jest.fn();
 const props: CheckboxInputProps = {
   testId: `test-checkbox-id`,
+  checkboxValue: false,
+  setCheckboxValue: mockSetCheckboxValue,
 };
 
 test(`should CheckboxInput render`, () => {

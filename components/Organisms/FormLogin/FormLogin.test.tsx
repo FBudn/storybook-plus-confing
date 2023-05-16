@@ -10,12 +10,15 @@ import FormLogin, { FormLoginProps } from "./FormLogin";
 
 const mockonPressButton = jest.fn();
 const mockInputFunction = jest.fn();
+const mockSetCheckboxValue = jest.fn();
 
 const props: FormLoginProps = {
   onPressButton: mockonPressButton,
   testId: `test-formLogin-id`,
   setEmailValue: mockInputFunction,
   setPasswordValue: mockInputFunction,
+  setCheckboxValue: mockSetCheckboxValue,
+  checkboxValue: false,
 };
 
 test(`Should render FormLogin component`, () => {
