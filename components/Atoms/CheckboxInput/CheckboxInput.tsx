@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import Checkbox from "expo-checkbox";
 import React from "react";
 import CheckboxInputStyles from "./CheckboxInput.style";
@@ -7,8 +8,6 @@ export interface CheckboxInputProps {
   setCheckboxValue: any;
   checkboxValue: boolean;
 }
-
-// export type CheckboxRef = HTMLInputElement;
 const CheckboxInput: React.FC<CheckboxInputProps> = ({
   testId,
   setCheckboxValue,

@@ -1,26 +1,30 @@
+/* eslint-disable no-multi-assign */
+/* eslint-disable no-console */
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-param-reassign */
-import { StyleSheet } from "react-native";
+// import { StyleSheet } from "react-native";
 import { createSlice } from "@reduxjs/toolkit";
 
 const defaultState = {
-  data: [],
+  data: {
+    email: "",
+    password: "",
+    checkbox: "",
+  },
 };
 
 const slice = createSlice({
   name: "logs",
   initialState: defaultState,
   reducers: {
-    addLogs: (state, action) => {
-      state.data.push(action.payload);
-    },
-    removeAllLogs: (state) => {
-      state.data = [];
+    showLogs: (state, action) => {
+      const cos = action.payload;
+      console.log(cos);
     },
   },
 });
 
-export const { addLogs, removeAllLogs } = slice.actions;
+export const { showLogs } = slice.actions;
 export default slice.reducer;
 
-const styles = StyleSheet.create({});
+// const styles = StyleSheet.create({});

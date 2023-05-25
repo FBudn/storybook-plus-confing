@@ -11,8 +11,9 @@ import Tile from "../../Atoms/Tile/Tile";
 import FormLogin from "../../Organisms/FormLogin/FormLogin";
 import Footer from "../../Organisms/Footer/Footer";
 import LoginTemplateStyles from "./LoginTemplate.style";
-import logsReducer, { addLogs } from "../../ReduxTest";
+import logsReducer, { showLogs } from "../../ReduxTest";
 import IconStyles from "../../Atoms/Icon/Icon.style";
+import ShowLogs from "../../Atoms/ShowLogs";
 
 export interface LoginTemplateProps {
   onPressButton: any;
@@ -27,17 +28,13 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onPressLink,
   testId,
 }) => {
-  let [emailValue, setEmailValue] = useState("");
+  const [emailValue, setEmailValue] = useState("");
 
-  setEmailValue = (email: any) => {
-    emailValue = email;
-  };
+  const [passwordValue, setPasswordValue] = useState("");
 
-  let [passwordValue, setPasswordValue] = useState("");
-
-  setPasswordValue = (password: any) => {
-    passwordValue = password;
-  };
+  /* setPasswordValue = (password: any) => {
+    passwordValue = password; BŁĄD
+  }; */
 
   const [checkboxValue, setCheckboxValue] = useState(false);
 
@@ -51,11 +48,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 
   const store = configureStore({ reducer });
 
-  const handleLogs = () => {
-    store.dispatch(addLogs(emailValue));
-    store.dispatch(addLogs(passwordValue));
-    store.dispatch(addLogs(checkboxValue));
-  };
+  const handleStates = store.dispatch(showLogs(emailValue));
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
 
@@ -80,10 +73,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           infoText="Need an account?"
         />
         <View>
-          <TouchableOpacity
-            style={IconStyles("red").container}
-            onPress={handleLogs}
-          />
           <TouchableOpacity
             style={IconStyles("blue").container}
             onPress={() => console.log(store.getState())}

@@ -16,7 +16,7 @@ const Input: React.FC<InputProps> = ({ testId, secureText, setInputValue }) => (
       data-testid={testId}
       testID={testId}
       secureTextEntry={secureText}
-      onChangeText={(value) => setInputValue(value)}
+      onChangeText={setInputValue}
     />
   </View>
 );

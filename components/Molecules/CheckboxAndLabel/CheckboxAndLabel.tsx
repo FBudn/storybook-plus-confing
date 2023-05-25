@@ -12,7 +12,6 @@ export interface CheckboxAndLabelProps {
   checkboxValue: any;
 }
 
-export type CheckboxRef = HTMLInputElement;
 const CheckboxAndLabel: React.FC<CheckboxAndLabelProps> = ({
   infoText,
   testId,
