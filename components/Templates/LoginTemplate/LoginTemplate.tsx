@@ -1,29 +1,23 @@
 import React, { useState } from "react";
-import {
-  View,
-  StatusBar,
-  GestureResponderEvent,
-  TouchableOpacity,
-} from "react-native";
+import { View, StatusBar, GestureResponderEvent } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import Tile from "../../Atoms/Tile/Tile";
 import FormLogin from "../../Organisms/FormLogin/FormLogin";
 import Footer from "../../Organisms/Footer/Footer";
 import LoginTemplateStyles from "./LoginTemplate.style";
-import logsReducer, { showLogs } from "../../ReduxTest";
-import IconStyles from "../../Atoms/Icon/Icon.style";
-import ShowLogs from "../../Atoms/ShowLogs";
+import logsReducer, {
+  showLogs,
+} from "../../Organisms/FormLogin/ReduxFormLogin";
 
 export interface LoginTemplateProps {
-  onPressButton: any;
+  onPressButton?: any;
   onPressIcon: (icon: string) => void;
   onPressLink: (event: GestureResponderEvent) => void;
   testId?: string;
 }
 
 const LoginTemplate: React.FC<LoginTemplateProps> = ({
-  onPressButton,
   onPressIcon,
   onPressLink,
   testId,
@@ -32,15 +26,11 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 
   const [passwordValue, setPasswordValue] = useState("");
 
-  /* setPasswordValue = (password: any) => {
-    passwordValue = password; BŁĄD
-  }; */
-
   const [checkboxValue, setCheckboxValue] = useState(false);
 
-  const handleButtonPress = () => {
+  /* const handleButtonPress = () => {
     onPressButton(emailValue, passwordValue, checkboxValue);
-  };
+  }; */
 
   const reducer = combineReducers({
     logs: logsReducer,
@@ -48,7 +38,9 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
 
   const store = configureStore({ reducer });
 
-  const handleStates = store.dispatch(showLogs(emailValue));
+  const handleStates = () => {
+    store.dispatch(showLogs({ emailValue, passwordValue, checkboxValue }));
+  };
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
 
@@ -57,7 +49,7 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <FormLogin
-          onPressButton={handleButtonPress}
+          onPressButton={handleStates}
           setEmailValue={setEmailValue}
           setPasswordValue={setPasswordValue}
           setCheckboxValue={setCheckboxValue}
@@ -72,12 +64,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           linkText="SIGN UP"
           infoText="Need an account?"
         />
-        <View>
-          <TouchableOpacity
-            style={IconStyles("blue").container}
-            onPress={() => console.log(store.getState())}
-          />
-        </View>
       </Tile>
     </View>
   );

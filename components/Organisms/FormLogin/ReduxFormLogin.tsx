@@ -1,8 +1,3 @@
-/* eslint-disable no-multi-assign */
-/* eslint-disable no-console */
-/* eslint-disable prettier/prettier */
-/* eslint-disable no-param-reassign */
-// import { StyleSheet } from "react-native";
 import { createSlice } from "@reduxjs/toolkit";
 
 const defaultState = {
@@ -18,13 +13,13 @@ const slice = createSlice({
   initialState: defaultState,
   reducers: {
     showLogs: (state, action) => {
-      const cos = action.payload;
-      console.log(cos);
+      let logs = { ...state.data };
+      logs = { ...action.payload };
+      alert(Object.values(logs));
+      console.log(logs);
     },
   },
 });
 
 export const { showLogs } = slice.actions;
 export default slice.reducer;
-
-// const styles = StyleSheet.create({});
