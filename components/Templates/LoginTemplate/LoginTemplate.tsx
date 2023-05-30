@@ -51,10 +51,6 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
           checkboxValue={checkboxValue}
           testId="test-formLogin-id"
         />
-        <TextInput
-          style={{ borderStyle: "solid", borderWidth: 2 }}
-          onChangeText={(value) => dispatch(showEmail(value))}
-        />
         <Footer
           testId="test-footer-id"
           onPressIcon={onPressIcon}
