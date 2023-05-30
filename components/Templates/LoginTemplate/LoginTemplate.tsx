@@ -1,14 +1,23 @@
-import React, { useState } from "react";
-import { View, StatusBar, GestureResponderEvent } from "react-native";
+/* eslint-disable prettier/prettier */
+import React from "react";
+import {
+  View,
+  StatusBar,
+  GestureResponderEvent,
+  TextInput,
+} from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
-import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { useDispatch, useSelector } from "react-redux";
 import Tile from "../../Atoms/Tile/Tile";
 import FormLogin from "../../Organisms/FormLogin/FormLogin";
 import Footer from "../../Organisms/Footer/Footer";
 import LoginTemplateStyles from "./LoginTemplate.style";
-import logsReducer, {
+import {
+  showEmail,
+  showPassword,
+  showCheckbox,
   showLogs,
-} from "../../Organisms/FormLogin/ReduxFormLogin";
+} from "../../redux/ReduxFormLogin";
 
 export interface LoginTemplateProps {
   onPressButton?: any;
@@ -22,24 +31,10 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
   onPressLink,
   testId,
 }) => {
-  const [emailValue, setEmailValue] = useState("");
-
-  const [passwordValue, setPasswordValue] = useState("");
-
-  const [checkboxValue, setCheckboxValue] = useState(false);
-
-  /* const handleButtonPress = () => {
-    onPressButton(emailValue, passwordValue, checkboxValue);
-  }; */
-
-  const reducer = combineReducers({
-    logs: logsReducer,
-  });
-
-  const store = configureStore({ reducer });
-
-  const handleStates = () => {
-    store.dispatch(showLogs({ emailValue, passwordValue, checkboxValue }));
+  const checkboxValue = useSelector((state: any) => state.logs.checkbox);
+  const dispatch = useDispatch();
+  const handleLogs = () => {
+    dispatch(showLogs());
   };
 
   NavigationBar.setBackgroundColorAsync("rgb(96 165 250)");
@@ -49,12 +44,16 @@ const LoginTemplate: React.FC<LoginTemplateProps> = ({
       <StatusBar backgroundColor="rgb(96 165 250)" />
       <Tile testId="test-tile-id">
         <FormLogin
-          onPressButton={handleStates}
-          setEmailValue={setEmailValue}
-          setPasswordValue={setPasswordValue}
-          setCheckboxValue={setCheckboxValue}
+          onPressButton={handleLogs}
+          setEmailValue={(value) => dispatch(showEmail(value))}
+          setPasswordValue={(value) => dispatch(showPassword(value))}
+          setCheckboxValue={(value: boolean) => dispatch(showCheckbox(value))}
           checkboxValue={checkboxValue}
           testId="test-formLogin-id"
+        />
+        <TextInput
+          style={{ borderStyle: "solid", borderWidth: 2 }}
+          onChangeText={(value) => dispatch(showEmail(value))}
         />
         <Footer
           testId="test-footer-id"

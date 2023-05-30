@@ -7,9 +7,15 @@ export interface InputProps {
   testId: string;
   secureText: boolean;
   setInputValue: any;
+  value?: any;
 }
 
-const Input: React.FC<InputProps> = ({ testId, secureText, setInputValue }) => (
+const Input: React.FC<InputProps> = ({
+  testId,
+  secureText,
+  setInputValue,
+  value,
+}) => (
   <View>
     <TextInput
       style={InputStyles.container}
@@ -17,6 +23,7 @@ const Input: React.FC<InputProps> = ({ testId, secureText, setInputValue }) => (
       testID={testId}
       secureTextEntry={secureText}
       onChangeText={setInputValue}
+      value={value}
     />
   </View>
 );
