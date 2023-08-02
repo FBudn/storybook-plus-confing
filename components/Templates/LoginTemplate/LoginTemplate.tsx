@@ -1,11 +1,6 @@
 /* eslint-disable prettier/prettier */
 import React from "react";
-import {
-  View,
-  StatusBar,
-  GestureResponderEvent,
-  TextInput,
-} from "react-native";
+import { View, StatusBar, GestureResponderEvent } from "react-native";
 import * as NavigationBar from "expo-navigation-bar";
 import { useDispatch, useSelector } from "react-redux";
 import Tile from "../../Atoms/Tile/Tile";
